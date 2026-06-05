@@ -8,5 +8,5 @@ year: 2024
 tech: [Node.js, Express, React, PostgreSQL]
 github: https://github.com/Minamotooo/On-the-road
 bullets:
-  - Developed a full-stack travel planning platform enabling users to discover and book accommodations, dining, attractions, and tour guide services.
+  - Built a web application providing a comprehensive travel planning platform, including services for accommodations, dining, attractions, and tour guides.
 ---
