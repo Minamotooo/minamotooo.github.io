@@ -1,7 +1,7 @@
 ---
 layout: page
 title: MemoryLane
-description: One-click black-and-white photo colorization using deep learning
+description: "Automatic Image Colorization · Computer Vision · Generative Models"
 importance: 2
 category: work
 selected: true
@@ -9,5 +9,5 @@ year: 2026
 tech: [PyTorch, ConvNeXt, U-Net, PatchGAN, VGG]
 github: https://github.com/Minamotooo/MemoryLane
 bullets:
-  - Built a deep learning colorizer that predicts chrominance (a*, b*) from grayscale luminance in the CIELab color space, tackling the desaturation problem of prior models through a ConvNeXt-Base encoder, colorfulness-filtered training data (top 28.7% of Places365 ~518K images), and a multi-component adversarial loss — achieving a colorfulness score of 40.9 vs. ground truth 36.9, and generalizing to real family photographs.
+  - "Framed grayscale-to-color mapping as a <strong>conditional image generation</strong> problem in the <strong>CIELab color space</strong>, building a <strong>ConvNeXt-Base encoder–U-Net decoder</strong> with a <strong>PatchGAN discriminator</strong>; addressed the gray-mean bias endemic to <strong>deep colorization models</strong> via colorfulness-filtered training data (~518K Places365 images) and a composite <strong>perceptual + adversarial loss</strong> (VGG + PatchGAN) — surpassing ground-truth colorfulness (40.9 vs. 36.9) and generalizing to real family photographs."
 ---
