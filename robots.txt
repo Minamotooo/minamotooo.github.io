@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://minamotooo.github.io/aurchichowdhury.github.io/sitemap.xml
+Sitemap: https://minamotooo.github.io/sitemap.xml
