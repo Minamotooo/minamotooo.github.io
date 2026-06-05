@@ -1,0 +1,11 @@
+- role: Undergraduate Research Intern
+  project: "Progya: Adaptive Tutoring Platform"
+  organization: "University Grants Commission of Bangladesh (UGC)"
+  period: "2025–Ongoing"
+  department: "Department of CSE, BUET"
+  description: "A funded adaptive tutoring platform using <strong>Bayesian Knowledge Tracing (BKT)</strong>, developing and refining learning pathways aligned with the <strong>Bangladesh Civil Service (BCS) exam syllabus</strong>."
+  supervisors:
+    - name: "Prof. Dr. Mohammad Saifur Rahman"
+      url: "https://scholar.google.com/citations?user=9d52x-cAAAAJ&hl=en"
+    - name: "Associate Prof. Mohammad Shariful Islam Bhuiyan"
+      url: "https://cse.buet.ac.bd/faculty/faculty_detail/sharif"
