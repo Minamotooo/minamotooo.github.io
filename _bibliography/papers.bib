@@ -1,115 +1,53 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title     = {Relativity: the Special and General Theory},
-  author    = {Einstein, Albert},
-  year      = {1920},
-  publisher = {Methuen & Co Ltd},
-  html      = {relativity.html}
+@inproceedings{raihan2026causal,
+  title     = {Causal Localization of the {English} Pivot in {LLaVA}: Mechanistic {VLM} Analysis and Training-Free Multilingual Steering},
+  booktitle = {Proceedings of the <a href="https://mellm.org/" target="_blank">1st Workshop on Multilinguality in the Era of Large Language Models (MeLLM)</a> at ACL 2026},
+  year      = {2026},
+  month     = jul,
+  address   = {San Diego, California},
+  publisher = {Association for Computational Linguistics},
+  abbr      = {ACL},
+  note      = {<span style="color:#27ae60;font-weight:600;">Accepted</span> · <u><b>Archival</b></u><br><small style="color:#888;">To appear in the ACL Anthology after proceedings are finalized. Will be available soon.</small>},
+  abstract  = {Multilingual vision-language models (VLMs) consistently underperform on non-English visual queries, yet the internal mechanism behind this disparity remains unknown. As a focused case study on LLaVA-1.5-7B, we apply logit-lens analysis and causal activation patching to show that non-English visual queries are routed through an English-biased representational bottleneck in layers 5–17, extending the English-pivot phenomenon of Wendler et al. (2024) to the multimodal setting. Peak causal influence occurs at layer 8 (AIE=0.49, averaged across languages), with all measurable pivot signal running through text-token positions. Without meaningful visual content (blank-image condition), language-specific representations do not emerge at any layer, showing that the pivot is image-content-dependent rather than triggered by any visual input. Building on these findings, we derive training-free language-steering vectors at the mechanistically identified pivot layers, improving Russian VQA by +6.5 pp and Portuguese by +4.0 pp on MMMB without any fine-tuning — the latter surpassing the English baseline.},
+  keywords  = {mechanistic interpretability, vision-language models, multilingual NLP, English pivot, activation patching, LLaVA},
+  selected  = {true}
 }
 
-@book{einstein1956investigations,
-  bibtex_show = {true},
-  title       = {Investigations on the Theory of the Brownian Movement},
-  author      = {Einstein, Albert},
-  year        = {1956},
-  publisher   = {Courier Corporation},
-  preview     = {brownian-motion.gif}
+@inproceedings{raihan2026affordances,
+  title     = {Where Do Affordances Crystallize? Video vs. Image Self-Supervised Encoders for Embodied Perception},
+  booktitle = {Proceedings of the <a href="https://embodied-ai.org/cvpr2026/" target="_blank">7th Annual Embodied AI (EAI) Workshop</a> at CVPR 2026},
+  year      = {2026},
+  month     = jun,
+  address   = {Denver, Colorado},
+  abbr      = {CVPR},
+  note      = {<span style="color:#27ae60;font-weight:600;">Accepted</span> · <u><b>Non-archival</b></u> · <u><b>Poster</b></u><br><small style="color:#888;">Paper will be released on the workshop website after the conference. Will be available soon.</small>},
+  abstract  = {Self-supervised video models are strong backbones for robotic perception. We probe 25 layer positions of architecturally matched ViT-L encoders (V-JEPA 2, V-JEPA 2.1, DINOv2) on the UMD Part Affordance Dataset and show that video SSL models crystallize affordance signal at layer 19 — four layers earlier than DINOv2 (image SSL, layer 23), suggesting a consistent effect of temporal predictive objectives on representation depth. Both V-JEPA variants share the same peak depth, yet V-JEPA 2.1's intermediate-layer supervision yields markedly stronger early-layer representations (layer 2 mAP: 92.2 vs. 85.0 for V-JEPA 2). Head ablation at each peak layer further reveals a sparse set of attention heads that concentrate the affordance signal; keeping only the top-3 heads achieves a 5.3× attention compute reduction with ≤0.1 mAP loss.},
+  keywords  = {affordance detection, self-supervised learning, video encoders, mechanistic interpretability, embodied AI, V-JEPA, DINOv2},
+  selected  = {true}
 }
 
-@article{einstein1950meaning,
-  abbr        = {AJP},
-  bibtex_show = {true},
-  title       = {The meaning of relativity},
-  author      = {Einstein, Albert and Taub, AH},
-  journal     = {American Journal of Physics},
-  volume      = {18},
-  number      = {6},
-  pages       = {403--404},
-  year        = {1950},
-  publisher   = {American Association of Physics Teachers}
+@inproceedings{raihan2026adagate,
+  title     = {When Does Visual Context Help? Adaptive Modality Gating for Efficient Multimodal {QA}},
+  booktitle = {Proceedings of the Efficient Multimodal Question Answering ({EMM-QA}) Workshop at {ICML} 2026},
+  year      = {2026},
+  month     = jul,
+  address   = {Seoul, South Korea},
+  abbr      = {ICML},
+  note      = {<span class="az-under-review" style="background:#fde8d8;color:#f0a060;font-weight:600;padding:1px 7px;border-radius:4px;font-size:0.82em;">Under Review</span><br><small style="color:#888;">arXiv preprint available soon.</small>},
+  abstract  = {Vision encoders are expensive. In streaming, incremental question answering — where questions arrive one sentence at a time and a system must decide both what to answer and when to commit — running the full vision encoder at every step compounds this cost unnecessarily. We present AdaGate, a lightweight Modality Gate that, given only the current partial question text, predicts whether activating the vision encoder will materially improve the answer. Trained on image utility labels derived from a frozen vision-language model on WebQA, AdaGate reduces vision encoder calls to ~46.5% while maintaining near-always-vision keyword F1. We further validate gate specificity on QANTA quizbowl questions — text-only by construction — where the gate fires on fewer than 2.9% of inputs despite having no explicit text-only supervision.},
+  keywords  = {multimodal question answering, modality gating, efficient inference, vision-language models, adaptive computation, WebQA}
 }
 
-@article{PhysRev.47.777,
-  abbr              = {PhysRev},
-  title             = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author            = {Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract          = {In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal           = {Phys. Rev.},
-  location          = {New Jersey},
-  volume            = {47},
-  issue             = {10},
-  pages             = {777--780},
-  numpages          = {0},
-  year              = {1935},
-  month             = {May},
-  publisher         = aps,
-  doi               = {10.1103/PhysRev.47.777},
-  url               = {https://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html              = {https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf               = {example_pdf.pdf},
-  altmetric         = {248277},
-  dimensions        = {true},
-  google_scholar_id = {qyhmnyLat1gC},
-  video             = {https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info   = {. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation        = {* Example use of superscripts<br>† Albert Einstein},
-  selected          = {true},
-  inspirehep_id     = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title     = {{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author    = {Einstein, A.},
-  journal   = {Annalen der physik},
-  volume    = {322},
-  number    = {8},
-  pages     = {549--560},
-  year      = {1905},
-  publisher = {Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr    = {Ann. Phys.},
-  title   = {Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author  = {Einstein, A.},
-  journal = {Ann. Phys.},
-  volume  = {17},
-  pages   = {549--560},
-  year    = {1905}
-}
-
-@article{einstein1905electrodynamics,
-  title  = {On the electrodynamics of moving bodies},
-  author = {Einstein, A.},
-  year   = {1905}
-}
-
-@article{einstein1905photoelectriceffect,
-  bibtex_show = {true},
-  abbr        = {Ann. Phys.},
-  title       = {{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}},
-  author      = {Albert Einstein},
-  abstract    = {This is the abstract text.},
-  journal     = {Ann. Phys.},
-  volume      = {322},
-  number      = {6},
-  pages       = {132--148},
-  year        = {1905},
-  doi         = {10.1002/andp.19053220607},
-  award       = {Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name  = {Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show = {true},
-  title       = {Letters on wave mechanics},
-  author      = {Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year        = {1967},
-  publisher   = {Vision},
-  preview     = {wave-mechanics.gif},
-  abbr        = {Vision}
+@inproceedings{raihan2026spatialcot,
+  title     = {{SpatialCoT}: Chain-of-Thought Spatial Grounding for Viewpoint-Robust {3D-LLMs}},
+  booktitle = {Proceedings of the 2nd Workshop on {3D-LLM/VLA}: Bridging Language, Vision and Action in 3D Environments at {CVPR} 2026},
+  year      = {2026},
+  month     = jun,
+  address   = {Denver, Colorado},
+  abbr      = {CVPR},
+  note      = {<span class="az-under-review" style="background:#fde8d8;color:#f0a060;font-weight:600;padding:1px 7px;border-radius:4px;font-size:0.82em;">Under Review</span><br><small style="color:#888;">arXiv preprint available soon.</small>},
+  abstract  = {Despite impressive performance on established 3D scene question-answering benchmarks, recent work reveals that state-of-the-art 3D large language models (3D-LLMs) exploit statistical patterns in training text rather than genuine spatial geometry. Ma et al. show that leading models lose up to 92% of their accuracy when scenes are presented under systematic viewpoint rotations — a failure mode inconsistent with true geometric understanding. We propose SpatialCoT (Spatial Chain-of-Thought), which addresses this by requiring the model to reason through five grounded steps — Localize, Orient, Enumerate, Compute, Answer — before producing its response. To train this behavior without manual annotation, we build an automatic pipeline that generates ~8,000 CoT-annotated training samples from ProcTHOR procedural scenes rendered with AI2-THOR. SpatialCoT improves Real-3DQA accuracy and reduces the relative accuracy drop at 180° scene rotation from 77% to 41%, demonstrating that grounding spatial reasoning in explicit intermediate steps yields a more robust 3D understanding.},
+  keywords  = {3D scene question answering, chain-of-thought reasoning, spatial grounding, viewpoint robustness, vision-language models, LoRA}
 }
