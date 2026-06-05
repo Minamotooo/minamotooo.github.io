@@ -10,13 +10,12 @@ nav_order: 3
 <div class="publications">
 
 {% assign sorted_projects = site.projects | sort: "importance" %}
-{% assign current_year = "" %}
+{% assign years = sorted_projects | map: "year" | uniq | sort | reverse %}
 
-{% for project in sorted_projects %}
-  {% if project.year != current_year %}
-    {% assign current_year = project.year %}
-    <h2 class="year">{{ current_year }}</h2>
-  {% endif %}
+{% for year in years %}
+  <h2 class="year">{{ year }}</h2>
+  {% assign year_projects = sorted_projects | where: "year", year %}
+  {% for project in year_projects %}
 
   <div class="row" style="margin-bottom: 2rem;">
     <div class="col">
@@ -54,6 +53,7 @@ nav_order: 3
     </div>
   </div>
 
+  {% endfor %}
 {% endfor %}
 
 </div>
