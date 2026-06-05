@@ -30,7 +30,7 @@ I am a junior-year Computer Science & Engineering student at the [Bangladesh Uni
 
 I am open to PhD opportunities for Fall 2027. 🎓
 
----
+<div id="selected-projects-wrapper" style="display:none;">
 
 ## Selected Projects
 
@@ -66,3 +66,20 @@ I am open to PhD opportunities for Fall 2027. 🎓
   </div>
 {% endfor %}
 </div>
+</div>
+
+<script>
+  window.addEventListener('load', function () {
+    var section = document.getElementById('selected-projects-wrapper');
+    if (!section) return;
+    var headings = Array.from(document.querySelectorAll('h2'));
+    var pubHeading = headings.find(function (h) {
+      return h.textContent.trim().toLowerCase().includes('selected publication');
+    });
+    if (pubHeading) {
+      var pubContainer = pubHeading.closest('.publications') || pubHeading.parentElement;
+      pubContainer.parentNode.insertBefore(section, pubContainer.nextSibling);
+    }
+    section.style.display = '';
+  });
+</script>
