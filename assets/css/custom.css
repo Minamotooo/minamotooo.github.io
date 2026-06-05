@@ -9,3 +9,18 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
+
+/* Publication abbr badges — match work experience pill style */
+.publications ol.bibliography li .abbr abbr {
+  background: #fef9e7 !important;
+  color: #9a7d0a !important;
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 3px 12px !important;
+  border-radius: 20px !important;
+  border: 1px solid #f0d060;
+}
+
+.publications ol.bibliography li .abbr abbr a {
+  color: #9a7d0a !important;
+}
