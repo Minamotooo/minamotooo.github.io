@@ -39,7 +39,7 @@ nav_order: 3
             <i class="fa-brands fa-github" style="font-size: 1.1rem;"></i>
           </a>
         {% endif %}
-        {% if project.demo and project.demo != project.github %}
+        {% if project.demo %}
           <a href="{{ project.demo }}" target="_blank" style="margin-right: 0.5rem;">
             <i class="fa-brands fa-youtube" style="font-size: 1.1rem;"></i>
           </a>

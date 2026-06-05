@@ -6,7 +6,6 @@ importance: 1
 category: work
 year: 2025
 tech: [ATMega32, SG90 Servo Motors, HC-05 Bluetooth, Kotlin]
-github: https://youtu.be/4RdSLmTVIiQ?si=WxHNnqUjH9Bf0_Kv
 demo: https://youtu.be/4RdSLmTVIiQ?si=WxHNnqUjH9Bf0_Kv
 bullets:
   - Engineered a fully automated Rubik's Cube solver that computes optimal solutions in at most 20 moves.
