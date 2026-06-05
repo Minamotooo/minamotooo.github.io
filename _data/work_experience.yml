@@ -2,6 +2,7 @@
   project: "Progya: Adaptive Tutoring Platform"
   subtitle: "UGC-funded project, Department of CSE, BUET"
   period: "Nov '25 – May '26"
+  tags: ["Dhaka, Bangladesh", "On-site"]
   description: "A funded adaptive tutoring platform using <strong>Bayesian Knowledge Tracing (BKT)</strong>, developing and refining learning pathways aligned with the <strong>Bangladesh Civil Service (BCS) exam syllabus</strong>."
   supervisors:
     - name: "Prof. Dr. Mohammad Saifur Rahman"
