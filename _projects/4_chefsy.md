@@ -8,5 +8,5 @@ year: 2023
 tech: [Java, JavaFX]
 github: https://github.com/Minamotooo/Chefsy
 bullets:
-  - Built a multithreaded desktop application in Java and JavaFX connecting restaurants and customers for seamless food ordering and management.
+  - A Java-threaded desktop app for restaurants and users to buy and sell food.
 ---
