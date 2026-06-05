@@ -26,6 +26,6 @@ latest_posts:
   limit: 3
 ---
 
-I am a junior-year Computer Science & Engineering student at the [Bangladesh University of Engineering and Technology (BUET)](https://www.buet.ac.bd/). My research interests span **Natural Language Processing**, **Multimodal AI**, **Computer Vision**, and **Machine Learning**.
+I am a junior-year [Computer Science & Engineering](https://cse.buet.ac.bd/) student at the [Bangladesh University of Engineering and Technology (BUET)](https://www.buet.ac.bd/). My research interests span **Natural Language Processing**, **Multimodal AI**, **Computer Vision**, and **Machine Learning**.
 
 I am open to PhD opportunities for Fall 2027. 🎓
