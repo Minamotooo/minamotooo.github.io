@@ -20,17 +20,9 @@ nav_order: 3
 
   <div class="row" style="margin-bottom: 2rem;">
     <div class="col">
+
       <div>
-        <span style="font-weight: 600; font-size: 1.05rem;">
-          {% if project.github %}
-            <a href="{{ project.github }}" target="_blank">{{ project.title }}</a>
-          {% else %}
-            {{ project.title }}
-          {% endif %}
-        </span>
-        {% if project.tech and project.tech != "" %}
-          &nbsp;&mdash;&nbsp;<em>{{ project.tech }}</em>
-        {% endif %}
+        <span style="font-weight: 600; font-size: 1.05rem;">{{ project.title }}</span>
       </div>
 
       {% if project.bullets %}
@@ -41,14 +33,24 @@ nav_order: 3
         </div>
       {% endif %}
 
-      <div style="margin-top: 0.5rem;">
+      <div style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.3rem; align-items: center;">
         {% if project.github %}
-          <a href="{{ project.github }}" target="_blank" class="btn btn-sm z-depth-0" role="button" style="font-size: 0.75rem;">GitHub</a>
+          <a href="{{ project.github }}" target="_blank" style="margin-right: 0.5rem;">
+            <i class="fa-brands fa-github" style="font-size: 1.1rem;"></i>
+          </a>
         {% endif %}
         {% if project.demo and project.demo != project.github %}
-          <a href="{{ project.demo }}" target="_blank" class="btn btn-sm z-depth-0" role="button" style="font-size: 0.75rem;">Demo</a>
+          <a href="{{ project.demo }}" target="_blank" style="margin-right: 0.5rem;">
+            <i class="fa-brands fa-youtube" style="font-size: 1.1rem;"></i>
+          </a>
+        {% endif %}
+        {% if project.tech %}
+          {% for tag in project.tech %}
+            <span class="badge" style="font-size: 0.72rem; font-weight: 400; border: 1px solid currentColor; background: transparent; padding: 2px 8px; border-radius: 4px;">{{ tag }}</span>
+          {% endfor %}
         {% endif %}
       </div>
+
     </div>
   </div>
 
