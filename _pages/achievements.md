@@ -98,13 +98,6 @@ nav_order: 4
   margin: 0;
 }
 
-.achievement-desc {
-  font-size: 0.88rem;
-  color: var(--global-text-color);
-  line-height: 1.55;
-  margin: 0;
-  flex: 1;
-}
 </style>
 
 <div class="achievement-grid">
@@ -124,9 +117,6 @@ nav_order: 4
       </div>
       <p class="achievement-title">{{ item.title }}</p>
       <p class="achievement-meta">{{ item.organization }} | {{ item.date }}</p>
-      {% if item.description %}
-        <p class="achievement-desc">{{ item.description }}</p>
-      {% endif %}
       {% if item.url %}
         <a href="{{ item.url }}" target="_blank" style="color: var(--global-theme-color); font-size: 0.88rem; font-weight: 500; margin-top: 0.25rem;">Read More &rarr;</a>
       {% endif %}
