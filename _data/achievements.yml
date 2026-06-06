@@ -3,7 +3,6 @@
   award: "1st Runner Up"
   tags:
     - "ResearchSpark"
-    - "BUET"
   organization: "Bangladesh University of Engineering and Technology (BUET)"
   date: "April 2026"
 
@@ -12,6 +11,13 @@
   award: "1st Runner Up"
   tags:
     - "HULT Prize"
-    - "BUET"
   organization: "Bangladesh University of Engineering and Technology (BUET)"
   date: "February 2026"
+
+- title: "2nd Runners Up, Research Poster Presentation"
+  image: buet_cse_fest.JPG
+  award: "2nd Runners Up"
+  tags:
+    - "CSE Fest 2024"
+  organization: "Bangladesh University of Engineering and Technology (BUET)"
+  date: "October 2024"
