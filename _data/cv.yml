@@ -81,7 +81,6 @@ cv:
         url: https://youtu.be/4RdSLmTVIiQ?si=WxHNnqUjH9Bf0_Kv
         highlights:
           - Developed a Fully Automated Rubik's Cube Solver capable of generating solutions in a maximum of 20 moves.
-          - Used two ATMega32 microcontrollers, eight SG90 servo motors and an HC-05 Bluetooth module.
         start_date: 2025-07
 
       - name: On the Road
