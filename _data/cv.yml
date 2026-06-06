@@ -1,10 +1,10 @@
 cv:
   name: Aurchi Chowdhury
-  label: Undergraduate Researcher
+  label: Student
   email: 2105083@ugrad.cse.buet.ac.bd
+  phone: "+8801821693900"
   location: Dhaka, Bangladesh
   image: ""
-  summary: ""
 
   social_networks:
     - network: GitHub
@@ -58,7 +58,7 @@ cv:
     Experience:
       - company: "Progya: Adaptive Tutoring Platform, Dept. of CSE, BUET (UGC-funded)"
         position: Undergraduate Research Intern
-        location: Dhaka, Bangladesh (On-site)
+        location: Dhaka, Bangladesh
         start_date: 2025-11
         end_date: 2026-05
         highlights:
@@ -90,6 +90,13 @@ cv:
         highlights:
           - Built a full-stack travel planning platform covering accommodations, dining, attractions, and tour guides.
         start_date: 2024-03
+
+    Languages:
+      - name: Bangla
+        summary: Native speaker
+
+      - name: English
+        summary: Fluent
 
     Awards:
       - title: "1st Runner Up, ResearchSpark 3 Minute Thesis Competition"
