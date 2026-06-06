@@ -1,189 +1,111 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Aurchi Chowdhury
+  label: Undergraduate Researcher
+  email: 2105083@ugrad.cse.buet.ac.bd
+  location: Dhaka, Bangladesh
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: ""
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: Minamotooo
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: aurchichowdhury
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: Bangladesh University of Engineering and Technology
+        location: Dhaka, Bangladesh
+        area: Computer Science and Engineering
+        studyType: Bachelor of Engineering
+        start_date: 2022-11
+        end_date: present
+        score: "CGPA: 3.88/4.00"
+        highlights: []
+
+      - institution: Viqarunnisa Noon School and College
+        location: Dhaka, Bangladesh
+        area: High School
+        studyType: Higher Secondary Certificate
+        start_date: 2009-01
+        end_date: 2021-12
+        score: "GPA: 5.00/5.00"
         highlights:
-          - Description 1.
-          - Description 2.
-
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
-
-    Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
-        highlights:
-          - Relativity
-          - Description 2.
-
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Languages:
-      - name: German
-        summary: "Native speaker"
-
-      - name: English
-        summary: "Fluent"
+          - Board Scholarship
 
     Interests:
-      - name: Physics
+      - name: Research Interests
         icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+        keywords: "Natural Language Processing · Multimodal AI · Computer Vision · Machine Learning · Mechanistic Interpretability"
 
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
+    Publications:
+      - title: "Causal Localization of the English Pivot in LLaVA: Mechanistic VLM Analysis and Training-Free Multilingual Steering"
+        authors:
+          - Aurchi Chowdhury
+        publisher: "1st Workshop on Multilinguality in the Era of Large Language Models (MeLLM), ACL 2026 | Archival"
+        releaseDate: 2026-07
+        url: https://github.com/azraihan/mul-vlm-mech-interp
+        summary: "San Diego, CA"
 
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
+      - title: "Where Do Affordances Crystallize? Video vs. Image Self-Supervised Encoders for Embodied Perception"
+        authors:
+          - Aurchi Chowdhury
+        publisher: "7th Annual Embodied AI (EAI) Workshop, CVPR 2026 | Non-archival Poster"
+        releaseDate: 2026-06
+        url: https://github.com/azraihan/affordance_crystallization
+        summary: "Denver, CO"
 
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+    Experience:
+      - company: "Progya: Adaptive Tutoring Platform, Dept. of CSE, BUET (UGC-funded)"
+        position: Undergraduate Research Intern
+        location: Dhaka, Bangladesh (On-site)
+        start_date: 2025-11
+        end_date: 2026-05
+        highlights:
+          - Developed an adaptive tutoring platform using Bayesian Knowledge Tracing (BKT), building learning pathways aligned with the BCS exam syllabus.
+          - "Supervisors: Md. Saifur Rahman, Md. Shariful Islam Bhuiyan"
 
     Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+      - name: MemoryLane
+        summary: "PyTorch, ConvNeXt, U-Net, PatchGAN, VGG"
+        url: https://github.com/Minamotooo/MemoryLane
         highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+          - Framed grayscale-to-color mapping as a conditional image generation problem in the CIELab color space, building a ConvNeXt-Base encoder -- U-Net decoder architecture.
+          - Incorporated a PatchGAN discriminator and mitigated gray-mean saturation bias via colorfulness-filtered training on ~518K Places365 images.
+          - Designed a composite perceptual + adversarial loss (VGG feature matching + PatchGAN) to balance global structure with local texture fidelity.
+          - Surpassed ground-truth colorfulness (40.9 vs. 36.9) and generalized to real, out-of-distribution family photographs.
+        start_date: 2026-04
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Scramble
+        summary: "ATMega32, SG90 servo motors, HC-05 Bluetooth module, Kotlin"
+        url: https://youtu.be/4RdSLmTVIiQ?si=WxHNnqUjH9Bf0_Kv
+        highlights:
+          - Developed a Fully Automated Rubik's Cube Solver capable of generating solutions in a maximum of 20 moves.
+          - Used two ATMega32 microcontrollers, eight SG90 servo motors and an HC-05 Bluetooth module.
+        start_date: 2025-07
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: On the Road
+        summary: "Node, Express, React, PostgreSQL"
+        url: https://github.com/Minamotooo/On-the-road
+        highlights:
+          - Built a full-stack travel planning platform covering accommodations, dining, attractions, and tour guides.
+        start_date: 2024-03
+
+    Awards:
+      - title: "1st Runner Up, ResearchSpark 3 Minute Thesis Competition"
+        date: 2026-04
+        awarder: BUET
+        url: https://www.facebook.com/events/1499256075247393/
+        summary: ""
+
+      - title: "1st Runner Up, HULT Prize at BUET"
+        date: 2026-02
+        awarder: BUET
+        url: https://www.facebook.com/hult.prize.buet
+        summary: ""
+
+      - title: "2nd Runners Up, Research Poster Presentation"
+        date: 2024-10
+        awarder: BUET CSE Fest 2024
+        url: https://www.facebook.com/profile.php?id=61566249745875
+        summary: ""
