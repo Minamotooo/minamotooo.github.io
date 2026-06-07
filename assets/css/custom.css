@@ -1,3 +1,8 @@
+.profile {
+  width: 40% !important;
+  max-width: 340px !important;
+}
+
 ul.timeline li {
   list-style: none;
 }
@@ -10,6 +15,6 @@ body {
   font-family: var(--global-font-family);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h6 {
   font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
