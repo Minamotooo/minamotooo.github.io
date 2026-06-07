@@ -5,7 +5,7 @@
     - "ResearchSpark"
   organization: "Bangladesh University of Engineering and Technology (BUET)"
   date: "April 2026"
-  description: "Curated BanglaHateCorpus — the largest unified Bangla hate speech dataset with 168K instances from 8 social media platforms, verified through a human-linguist + LLM-as-judge pipeline. Designed BanHateFormer, a lightweight Transformer with Mixture-of-Experts feed-forward layers that achieves 91.33% F1-score while being 94× smaller than BanglaBERT, making NLP-based content moderation deployable for 242 million Bangla speakers."
+  description: "Presented BanglaHateCorpus — a unified Bangla hate speech dataset of 168K instances from 8 social media platforms, with a verification pipeline combining human-linguist review and LLM-as-judge scoring. Presented BanHateFormer, a lightweight Transformer with Mixture-of-Experts feed-forward layers targeting 91.33% F1-score at 94× smaller scale than BanglaBERT, toward deployable NLP-based content moderation for 242 million Bangla speakers."
   keywords:
     - "BanglaHateCorpus"
     - "168K instances"
@@ -23,7 +23,7 @@
     - "HULT Prize"
   organization: "Bangladesh University of Engineering and Technology (BUET)"
   date: "February 2026"
-  description: "Co-developed ATLAS, an AI-powered adaptive tutoring system targeting 24 million underserved Bangladeshi students. The platform integrates handwritten script OCR via Vision Transformers, Bayesian Knowledge Tracing for personalized learning path generation, and BanglaBERT-based NLP grading — a multimodal machine learning approach to democratizing quality education."
+  description: "Pitched ATLAS, an AI-powered adaptive tutoring platform targeting 24 million underserved Bangladeshi students. The proposed system integrates handwritten script OCR via Vision Transformers, Bayesian Knowledge Tracing for personalized learning paths, and BanglaBERT-based NLP grading — a multimodal machine learning approach to democratizing quality education."
   keywords:
     - "ATLAS"
     - "Vision Transformers"
