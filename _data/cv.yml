@@ -1,9 +1,7 @@
 cv:
   name: Aurchi Chowdhury
-  label: Student
   email: 2105083@ugrad.cse.buet.ac.bd
   location: Dhaka, Bangladesh
-  image: ""
 
   social_networks:
     - network: GitHub
@@ -90,20 +88,23 @@ cv:
         start_date: 2024-03
 
     Awards:
-      - title: "1st Runner Up, ResearchSpark 3 Minute Thesis Competition"
-        date: 2026-04
-        awarder: BUET
+      - name: "1st Runner Up, ResearchSpark 3 Minute Thesis Competition"
+        date: "April 2026"
+        location: BUET
         url: https://www.facebook.com/events/1499256075247393/
-        summary: "Built BanglaHateCorpus (168K instances) and BanHateFormer — a Mixture-of-Experts Transformer achieving 91.33% F1 for low-resource NLP hate speech detection, 94× lighter than BanglaBERT."
+        highlights:
+          - "Built BanglaHateCorpus (168K instances) and BanHateFormer — a Mixture-of-Experts Transformer achieving 91.33% F1 for low-resource NLP hate speech detection, 94× lighter than BanglaBERT."
 
-      - title: "1st Runner Up, HULT Prize at BUET"
-        date: 2026-02
-        awarder: BUET
+      - name: "1st Runner Up, HULT Prize at BUET"
+        date: "February 2026"
+        location: BUET
         url: https://www.facebook.com/hult.prize.buet
-        summary: "Co-developed ATLAS, a multimodal AI tutoring platform combining Vision Transformer OCR, Bayesian Knowledge Tracing, and BanglaBERT-based NLP grading for 24M underserved students."
+        highlights:
+          - "Co-developed ATLAS, a multimodal AI tutoring platform combining Vision Transformer OCR, Bayesian Knowledge Tracing, and BanglaBERT-based NLP grading for 24M underserved students."
 
-      - title: "2nd Runners Up, Research Poster Presentation"
-        date: 2024-10
-        awarder: BUET CSE Fest 2024
+      - name: "2nd Runners Up, Research Poster Presentation"
+        date: "October 2024"
+        location: BUET CSE Fest 2024
         url: https://www.facebook.com/profile.php?id=61566249745875
-        summary: "Designed a real-time multimodal threat detection system fusing NLP-based rumor classification with CNN+RNN CCTV video analysis to cross-validate incidents across 16 threat categories."
+        highlights:
+          - "Designed a real-time multimodal threat detection system fusing NLP-based rumor classification with CNN+RNN CCTV video analysis to cross-validate incidents across 16 threat categories."
