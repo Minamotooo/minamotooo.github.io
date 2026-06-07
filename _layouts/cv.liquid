@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+{% if site.plugins contains 'al_folio_cv' %}
+  {% al_folio_cv_render %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var order = ['Contact', 'Interests', 'Education', 'Publications', 'Experience', 'Projects', 'Awards'];
+
+      var container = document.querySelector('.cv');
+      if (!container) return;
+
+      var cards = Array.from(container.querySelectorAll('.card'));
+
+      cards.sort(function (a, b) {
+        var aH3 = a.querySelector('h3');
+        var bH3 = b.querySelector('h3');
+        var aTitle = aH3 ? aH3.textContent.trim() : '';
+        var bTitle = bH3 ? bH3.textContent.trim() : '';
+        var aIdx = order.indexOf(aTitle);
+        var bIdx = order.indexOf(bTitle);
+        if (aIdx === -1) aIdx = order.length;
+        if (bIdx === -1) bIdx = order.length;
+        return aIdx - bIdx;
+      });
+
+      cards.forEach(function (card) {
+        container.appendChild(card);
+      });
+    });
+  </script>
+{% else %}
+  <div class="post">
+    <p>The CV plugin (<code>al_folio_cv</code>) is not enabled. Add it to the <code>plugins</code> list in <code>_config.yml</code> to render this page.</p>
+  </div>
+{% endif %}
