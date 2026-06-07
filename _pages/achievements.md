@@ -117,6 +117,9 @@ nav_order: 4
       </div>
       <p class="achievement-title">{{ item.title }}</p>
       <p class="achievement-meta">{{ item.organization }} | {{ item.date }}</p>
+      {% if item.description %}
+        <p style="font-size: 0.85rem; color: var(--global-text-color-light); margin: 0.25rem 0 0; line-height: 1.5;">{{ item.description }}</p>
+      {% endif %}
       {% if item.url %}
         <a href="{{ item.url }}" target="_blank" style="color: var(--global-theme-color); font-size: 0.88rem; font-weight: 500; margin-top: 0.25rem;">Read More &rarr;</a>
       {% endif %}
