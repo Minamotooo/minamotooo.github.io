@@ -60,43 +60,6 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-    <!-- Work Experience -->
-    {% if site.data.work_experience %}
-      <h2>Work Experience</h2>
-      <div class="publications">
-        {% for job in site.data.work_experience %}
-          <div class="row" style="margin-bottom: 2rem;">
-            <div class="col">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                <span style="display: inline-block; background: #fef9e7; color: #9a7d0a; font-weight: 600; font-size: 0.78rem; padding: 3px 12px; border-radius: 20px; border: 1px solid #f0d060;">
-                  <i class="fa-solid fa-graduation-cap" style="margin-right: 5px;"></i>{{ job.role }}
-                </span>
-                <span style="font-size: 0.88rem; color: var(--global-text-color-light); white-space: nowrap; margin-left: 1rem;">{{ job.period }}</span>
-              </div>
-              <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.2rem; font-size: 0.9rem; margin-bottom: 0.4rem;">
-                <span style="font-weight: 600; color: var(--global-theme-color);">{{ job.subtitle }}</span>
-                {% if job.tags %}
-                  {% for tag in job.tags %}
-                    <span style="color: var(--global-text-color-light);">·</span>
-                    <span style="color: var(--global-text-color-light);">{{ tag }}</span>
-                  {% endfor %}
-                {% endif %}
-              </div>
-              <div style="margin-bottom: 0.35rem; font-size: 0.95rem;">{{ job.description }}</div>
-              {% if job.supervisors %}
-                <div style="font-size: 0.9rem; color: var(--global-text-color-light);">
-                  Supervised by
-                  {% for sup in job.supervisors %}
-                    <a href="{{ sup.url }}" target="_blank" style="font-weight: 600; color: inherit;">{{ sup.name }}</a>{% unless forloop.last %} and {% endunless %}
-                  {% endfor %}
-                </div>
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
     <!-- Selected projects -->
     {% assign selected_projects = site.projects | where: "selected", true | sort: "importance" %}
     {% if selected_projects.size > 0 %}
@@ -135,6 +98,44 @@ layout: default
                   {% endfor %}
                 {% endif %}
               </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+
+    <!-- Work Experience -->
+    {% if site.data.work_experience %}
+      <h2>Work Experience</h2>
+      <div class="publications">
+        {% for job in site.data.work_experience %}
+          <div class="row" style="margin-bottom: 2rem;">
+            <div class="col">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                <span style="display: inline-block; background: #fef9e7; color: #9a7d0a; font-weight: 600; font-size: 0.78rem; padding: 3px 12px; border-radius: 20px; border: 1px solid #f0d060;">
+                  <i class="fa-solid fa-graduation-cap" style="margin-right: 5px;"></i>{{ job.role }}
+                </span>
+                <span style="font-size: 0.88rem; color: var(--global-text-color-light); white-space: nowrap; margin-left: 1rem;">{{ job.period }}</span>
+              </div>
+              <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.2rem; font-size: 0.9rem; margin-bottom: 0.4rem;">
+                <span style="font-weight: 600; color: var(--global-theme-color);">{{ job.subtitle }}</span>
+                {% if job.tags %}
+                  {% for tag in job.tags %}
+                    <span style="color: var(--global-text-color-light);">·</span>
+                    <span style="color: var(--global-text-color-light);">{{ tag }}</span>
+                  {% endfor %}
+                {% endif %}
+              </div>
+              <div style="margin-bottom: 0.35rem; font-size: 0.95rem;">{{ job.description }}</div>
+              {% if job.supervisors %}
+                <div style="font-size: 0.9rem; color: var(--global-text-color-light);">
+                  Supervised by
+                  {% for sup in job.supervisors %}
+                    <a href="{{ sup.url }}" target="_blank" style="font-weight: 600; color: inherit;">{{ sup.name }}</a>{% unless forloop.last %} and {% endunless %}
+                  {% endfor %}
+                </div>
+              {% endif %}
             </div>
           </div>
         {% endfor %}
