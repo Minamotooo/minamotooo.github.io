@@ -6,6 +6,15 @@
   organization: "Bangladesh University of Engineering and Technology (BUET)"
   date: "April 2026"
   description: "Curated BanglaHateCorpus — the largest unified Bangla hate speech dataset with 168K instances from 8 social media platforms, verified through a human-linguist + LLM-as-judge pipeline. Designed BanHateFormer, a lightweight Transformer with Mixture-of-Experts feed-forward layers that achieves 91.33% F1-score while being 94× smaller than BanglaBERT, making NLP-based content moderation deployable for 242 million Bangla speakers."
+  keywords:
+    - "BanglaHateCorpus"
+    - "168K instances"
+    - "BanHateFormer"
+    - "Mixture-of-Experts"
+    - "91.33% F1-score"
+    - "94×"
+    - "BanglaBERT"
+    - "NLP-based content moderation"
 
 - title: "1st Runner Up, HULT Prize at BUET"
   image: hult_prize.jpg
@@ -15,6 +24,12 @@
   organization: "Bangladesh University of Engineering and Technology (BUET)"
   date: "February 2026"
   description: "Co-developed ATLAS, an AI-powered adaptive tutoring system targeting 24 million underserved Bangladeshi students. The platform integrates handwritten script OCR via Vision Transformers, Bayesian Knowledge Tracing for personalized learning path generation, and BanglaBERT-based NLP grading — a multimodal machine learning approach to democratizing quality education."
+  keywords:
+    - "ATLAS"
+    - "Vision Transformers"
+    - "Bayesian Knowledge Tracing"
+    - "BanglaBERT-based NLP grading"
+    - "multimodal machine learning"
 
 - title: "2nd Runners Up, Research Poster Presentation"
   image: buet_cse_fest.JPG
@@ -24,3 +39,11 @@
   organization: "Bangladesh University of Engineering and Technology (BUET)"
   date: "October 2024"
   description: "Designed a real-time multimodal threat detection system that cross-validates social media text with government CCTV footage. The pipeline combines NLP-based rumor classification, CNN+RNN video frame analysis, and a confidence-scoring fusion module to categorize incidents into 16 threat classes — intersecting Computer Vision, Natural Language Processing, and Multimodal AI for public safety."
+  keywords:
+    - "multimodal threat detection"
+    - "NLP-based rumor classification"
+    - "CNN+RNN"
+    - "16 threat classes"
+    - "Computer Vision"
+    - "Natural Language Processing"
+    - "Multimodal AI"

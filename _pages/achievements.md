@@ -98,6 +98,22 @@ nav_order: 4
   margin: 0;
 }
 
+.achievement-desc {
+  font-size: 0.85rem;
+  color: var(--global-text-color);
+  margin: 0.25rem 0 0;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.achievement-desc .kw {
+  color: var(--global-theme-color);
+  font-weight: 600;
+  background: color-mix(in srgb, var(--global-theme-color) 10%, transparent);
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
 </style>
 
 <div class="achievement-grid">
@@ -118,7 +134,7 @@ nav_order: 4
       <p class="achievement-title">{{ item.title }}</p>
       <p class="achievement-meta">{{ item.organization }} | {{ item.date }}</p>
       {% if item.description %}
-        <p style="font-size: 0.85rem; color: var(--global-text-color-light); margin: 0.25rem 0 0; line-height: 1.5;">{{ item.description }}</p>
+        <p class="achievement-desc" data-keywords="{{ item.keywords | join: '||' }}">{{ item.description }}</p>
       {% endif %}
       {% if item.url %}
         <a href="{{ item.url }}" target="_blank" style="color: var(--global-theme-color); font-size: 0.88rem; font-weight: 500; margin-top: 0.25rem;">Read More &rarr;</a>
@@ -127,3 +143,17 @@ nav_order: 4
   </div>
 {% endfor %}
 </div>
+
+<script>
+document.querySelectorAll('.achievement-desc[data-keywords]').forEach(function(p) {
+  var raw = p.getAttribute('data-keywords');
+  if (!raw) return;
+  var keywords = raw.split('||').filter(Boolean).sort(function(a, b) { return b.length - a.length; });
+  var html = p.textContent;
+  keywords.forEach(function(kw) {
+    var escaped = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    html = html.replace(new RegExp('(' + escaped + ')', 'g'), '<span class="kw">$1</span>');
+  });
+  p.innerHTML = html;
+});
+</script>
