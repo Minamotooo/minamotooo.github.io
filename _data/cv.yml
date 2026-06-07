@@ -102,16 +102,16 @@ cv:
         date: 2026-04
         awarder: BUET
         url: https://www.facebook.com/events/1499256075247393/
-        summary: ""
+        summary: "Built BanglaHateCorpus (168K instances) and BanHateFormer — a Mixture-of-Experts Transformer achieving 91.33% F1 for low-resource NLP hate speech detection, 94× lighter than BanglaBERT."
 
       - title: "1st Runner Up, HULT Prize at BUET"
         date: 2026-02
         awarder: BUET
         url: https://www.facebook.com/hult.prize.buet
-        summary: ""
+        summary: "Co-developed ATLAS, a multimodal AI tutoring platform combining Vision Transformer OCR, Bayesian Knowledge Tracing, and BanglaBERT-based NLP grading for 24M underserved students."
 
       - title: "2nd Runners Up, Research Poster Presentation"
         date: 2024-10
         awarder: BUET CSE Fest 2024
         url: https://www.facebook.com/profile.php?id=61566249745875
-        summary: ""
+        summary: "Designed a real-time multimodal threat detection system fusing NLP-based rumor classification with CNN+RNN CCTV video analysis to cross-validate incidents across 16 threat categories."
