@@ -1,3 +1,8 @@
+.profile {
+  width: 40% !important;
+  max-width: 340px !important;
+}
+
 ul.timeline li {
   list-style: none;
 }

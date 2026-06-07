@@ -2,7 +2,7 @@
 layout: page
 title: Achievements
 permalink: /achievements/
-description:
+description: Here's an overview of some of my work in deep learning competitions and research competitions.
 nav: true
 nav_order: 4
 ---
@@ -92,9 +92,17 @@ nav_order: 4
   line-height: 1.35;
 }
 
+.achievement-subtitle {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--global-theme-color);
+  margin: 0;
+}
+
 .achievement-meta {
   font-size: 0.82rem;
-  color: var(--global-text-color-light);
+  color: var(--global-text-color);
+  opacity: 0.75;
   margin: 0;
 }
 
@@ -104,6 +112,21 @@ nav_order: 4
   margin: 0.25rem 0 0;
   line-height: 1.6;
   opacity: 0.9;
+}
+
+.achievement-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--global-theme-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.achievement-toggle:hover {
+  text-decoration: underline;
 }
 
 .achievement-desc .kw {
@@ -132,12 +155,13 @@ nav_order: 4
         {% endfor %}
       </div>
       <p class="achievement-title">{{ item.title }}</p>
+      {% if item.subtitle %}
+        <p class="achievement-subtitle">{{ item.subtitle }}</p>
+      {% endif %}
       <p class="achievement-meta">{{ item.organization }} | {{ item.date }}</p>
       {% if item.description %}
-        <p class="achievement-desc" data-keywords="{{ item.keywords | join: '||' }}">{{ item.description }}</p>
-      {% endif %}
-      {% if item.url %}
-        <a href="{{ item.url }}" target="_blank" style="color: var(--global-theme-color); font-size: 0.88rem; font-weight: 500; margin-top: 0.25rem;">Read More &rarr;</a>
+        <p class="achievement-desc" data-keywords="{{ item.keywords | join: '||' }}" style="display: none;">{{ item.description }}</p>
+        <button class="achievement-toggle" onclick="toggleDesc(this)">Read More ↓</button>
       {% endif %}
     </div>
   </div>
@@ -149,11 +173,18 @@ document.querySelectorAll('.achievement-desc[data-keywords]').forEach(function(p
   var raw = p.getAttribute('data-keywords');
   if (!raw) return;
   var keywords = raw.split('||').filter(Boolean).sort(function(a, b) { return b.length - a.length; });
-  var html = p.textContent;
+  var html = p.innerHTML;
   keywords.forEach(function(kw) {
     var escaped = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     html = html.replace(new RegExp('(' + escaped + ')', 'g'), '<span class="kw">$1</span>');
   });
   p.innerHTML = html;
 });
+
+function toggleDesc(btn) {
+  var desc = btn.previousElementSibling;
+  var visible = desc.style.display !== 'none';
+  desc.style.display = visible ? 'none' : 'block';
+  btn.textContent = visible ? 'Read More ↓' : 'Show Less ↑';
+}
 </script>

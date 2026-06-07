@@ -1,3 +1,21 @@
+- title: "11th / 124, DL Sprint 4.0 — Bengali Long-Form ASR & Diarization"
+  subtitle: "<span style='color: var(--global-text-color); font-style: italic; opacity: 0.6; text-decoration: underline;'>7th / 124 in</span> <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-long-form-speech-recognition/leaderboard' target='_blank' style='margin-left: 4px;'><i class='fa-brands fa-kaggle' style='margin-right: 2px;'></i> ASR</a><br><span style='color: var(--global-text-color); font-style: italic; opacity: 0.6; text-decoration: underline;'>4th / 124 in</span> <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-speaker-diarization-challenge/leaderboard' target='_blank' style='margin-left: 4px;'><i class='fa-brands fa-kaggle' style='margin-right: 2px;'></i> Diarization</a>"
+  image: kaggle.jpeg
+  award: "11th / 124 Overall"
+  tags:
+    - "DL Sprint 4.0"
+    - "Kaggle"
+  organization: "BUET CSE Fest 2026"
+  date: "March 2026"
+  description: "Tackled low-resource Natural Language Processing for Bengali long-form audio across two tracks: for <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-long-form-speech-recognition/leaderboard' target='_blank'>ASR</a>, built WhisperAlign — a word-boundary-aware chunker using Whisper's cross-attention alignment heads — and fine-tuned a Whisper-medium Bengali ASR model; for <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-speaker-diarization-challenge/leaderboard' target='_blank'>diarization</a>, applied Machine Learning domain adaptation by fine-tuning Pyannote's segmentation head on Bengali conversational speech, paired with a Dual-VAD intersection for noise-robust boundary detection.<br><a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0' target='_blank'><i class='fa-brands fa-github' style='margin-right: 4px;'></i>Code</a> · <a href='https://arxiv.org/abs/2603.04809' target='_blank'><i class='ai ai-arxiv' style='margin-right: 4px;'></i>Paper</a> · <a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0/blob/main/Presentation.pdf' target='_blank'><i class='fa-solid fa-file-powerpoint' style='margin-right: 4px;'></i>Slides</a>"
+  keywords:
+    - "Natural Language Processing"
+    - "Machine Learning"
+    - "WhisperAlign"
+    - "cross-attention alignment heads"
+    - "domain adaptation"
+    - "Dual-VAD intersection"
+
 - title: "1st Runner Up, ResearchSpark 3 Minute Thesis Competition"
   image: research_spark.jpg
   award: "1st Runner Up"
@@ -16,21 +34,6 @@
     - "BanglaBERT"
     - "NLP-based content moderation"
 
-- title: "1st Runner Up, HULT Prize at BUET"
-  image: hult_prize.jpg
-  award: "1st Runner Up"
-  tags:
-    - "HULT Prize"
-  organization: "Bangladesh University of Engineering and Technology (BUET)"
-  date: "February 2026"
-  description: "Pitched ATLAS, an AI-powered adaptive tutoring platform targeting 24 million underserved Bangladeshi students. The proposed system integrates handwritten script OCR via Vision Transformers, Bayesian Knowledge Tracing for personalized learning paths, and BanglaBERT-based NLP grading — a multimodal machine learning approach to democratizing quality education."
-  keywords:
-    - "ATLAS"
-    - "Vision Transformers"
-    - "Bayesian Knowledge Tracing"
-    - "BanglaBERT-based NLP grading"
-    - "multimodal machine learning"
-
 - title: "2nd Runners Up, Research Poster Presentation"
   image: buet_cse_fest.JPG
   award: "2nd Runners Up"
@@ -47,3 +50,18 @@
     - "Computer Vision"
     - "Natural Language Processing"
     - "Multimodal AI"
+
+- title: "1st Runner Up, HULT Prize at BUET"
+  image: hult_prize.jpg
+  award: "1st Runner Up"
+  tags:
+    - "HULT Prize"
+  organization: "Bangladesh University of Engineering and Technology (BUET)"
+  date: "February 2026"
+  description: "Pitched ATLAS, an AI-powered adaptive tutoring platform targeting 24 million underserved Bangladeshi students. The proposed system integrates handwritten script OCR via Vision Transformers, Bayesian Knowledge Tracing for personalized learning paths, and BanglaBERT-based NLP grading — a multimodal machine learning approach to democratizing quality education."
+  keywords:
+    - "ATLAS"
+    - "Vision Transformers"
+    - "Bayesian Knowledge Tracing"
+    - "BanglaBERT-based NLP grading"
+    - "multimodal machine learning"
