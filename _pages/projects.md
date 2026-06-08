@@ -21,7 +21,7 @@ nav_order: 3
     <div class="col">
 
       <div>
-        <span style="font-weight: 600; font-size: 1.05rem;">{{ project.title }}</span>
+        <span style="font-weight: 600; font-size: 1.4rem;">{{ project.title }}</span>
       </div>
 
       {% if project.bullets %}
