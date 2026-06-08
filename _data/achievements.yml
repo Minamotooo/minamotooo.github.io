@@ -1,6 +1,6 @@
 - title: "11th / 124, DL Sprint 4.0 — Bengali Long-Form ASR & Diarization"
   subtitle: "<span style='color: var(--global-text-color); font-style: italic; opacity: 0.6; text-decoration: underline;'>7th / 124 in</span> <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-long-form-speech-recognition/leaderboard' target='_blank' style='margin-left: 4px;'><i class='fa-brands fa-kaggle' style='margin-right: 2px;'></i> ASR</a><br><span style='color: var(--global-text-color); font-style: italic; opacity: 0.6; text-decoration: underline;'>4th / 124 in</span> <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-speaker-diarization-challenge/leaderboard' target='_blank' style='margin-left: 4px;'><i class='fa-brands fa-kaggle' style='margin-right: 2px;'></i> Diarization</a>"
-  image: kaggle.jpeg
+  image: dl_sprint.jpg
   award: "11th / 124 Overall"
   tags:
     - "DL Sprint 4.0"
