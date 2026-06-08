@@ -1,6 +1,6 @@
 cv:
   name: Aurchi Chowdhury
-  label: Student
+  label: "Undergraduate Student <em>(Computer Science and Engineering)</em>"
   email: 2105083@ugrad.cse.buet.ac.bd
   location: Dhaka, Bangladesh
 
@@ -13,7 +13,6 @@ cv:
   sections:
     Interests:
       - name: Research Interests
-        icon: fa-solid fa-tag
         keywords: "Natural Language Processing · Multimodal AI · Computer Vision · Machine Learning · Mechanistic Interpretability"
 
     Education:
@@ -34,7 +33,7 @@ cv:
         end_date: 2021-12
         score: "GPA: 5.00/5.00"
         highlights:
-          - Board Scholarship
+          # - Board Scholarship
 
     Publications:
       - title: "Causal Localization of the English Pivot in LLaVA: Mechanistic VLM Analysis and Training-Free Multilingual Steering"
@@ -60,18 +59,27 @@ cv:
         start_date: 2025-11
         end_date: 2026-05
         highlights:
-          - Developed an adaptive tutoring platform using Bayesian Knowledge Tracing (BKT), building learning pathways aligned with the BCS exam syllabus.
-          - "Supervisors: Md. Saifur Rahman, Md. Shariful Islam Bhuiyan"
+          - Developed an adaptive tutoring platform using Bayesian Knowledge Tracing (BKT), building learning pathways aligned with the Bangladesh Civil Service (BCS) exam syllabus.
+          - "Supervisors: <a href='https://cse.buet.ac.bd/faculty/faculty_detail/mrahman' target='_blank'>Md. Saifur Rahman</a>, <a href='https://cse.buet.ac.bd/faculty/faculty_detail/sharif' target='_blank'>Md. Shariful Islam Bhuiyan</a>"
 
     Projects:
+      - name: Bengali Long-Form ASR and Diarization
+        summary: "PyTorch, Whisper, Pyannote, Silero VAD, whisper-timestamped"
+        url: https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0
+        highlights:
+          - Built WhisperAlign — a word-boundary-aware chunker that extracts per-word timestamps from Whisper's own cross-attention alignment heads, requiring no external tools or boundary annotations, and greedily assembles fixed-length segments that never break mid-word.
+          - Fine-tuned a Whisper-medium Bengali ASR model on the resulting chunks for low-resource Natural Language Processing.
+          - Domain-adapted Pyannote for Bengali speaker diarization by fine-tuning only its segmentation head on Bengali conversational audio, without disturbing the language-agnostic embedding space.
+          - Introduced a Dual-VAD intersection (Pyannote ∩ Silero VAD) retaining only segments confirmed by an independent speech boundary detector.
+        start_date: 2026-03
+
       - name: MemoryLane
         summary: "PyTorch, ConvNeXt, U-Net, PatchGAN, VGG"
         url: https://github.com/Minamotooo/MemoryLane
         highlights:
-          - Framed grayscale-to-color mapping as a conditional image generation problem in the CIELab color space, building a ConvNeXt-Base encoder -- U-Net decoder architecture.
-          - Incorporated a PatchGAN discriminator and mitigated gray-mean saturation bias via colorfulness-filtered training on ~518K Places365 images.
-          - Designed a composite perceptual + adversarial loss (VGG feature matching + PatchGAN) to balance global structure with local texture fidelity.
-          - Surpassed ground-truth colorfulness (40.9 vs. 36.9) and generalized to real, out-of-distribution family photographs.
+          - Framed grayscale-to-color mapping as a Computer Vision problem of conditional image generation in the CIELab color space.
+          - Built a ConvNeXt-Base encoder–U-Net decoder with a PatchGAN discriminator.
+          - Addressed the gray-mean bias endemic to deep colorization models via colorfulness-filtered training data and a composite perceptual + adversarial loss (VGG + PatchGAN).
         start_date: 2026-04
 
       - name: Scramble
@@ -89,20 +97,26 @@ cv:
         start_date: 2024-03
 
     Awards:
+      - title: "11th / 124, DL Sprint 4.0 — Bengali Long-Form ASR & Diarization"
+        date: 2026-03
+        awarder: BUET CSE Fest 2026
+        url: https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0
+        summary: "Tackled <strong>low-resource Natural Language Processing</strong> for Bengali across two Kaggle tracks: built <strong>WhisperAlign</strong> using Whisper's <strong>cross-attention alignment heads</strong> for Bengali ASR (7th / 124); domain-adapted <strong>Pyannote</strong> with <strong>Dual-VAD intersection</strong> for speaker diarization (4th / 124)."
+
       - title: "1st Runner Up, ResearchSpark 3 Minute Thesis Competition"
         date: 2026-04
         awarder: BUET
         url: https://www.facebook.com/events/1499256075247393/
-        summary: "Built BanglaHateCorpus (168K instances) and BanHateFormer — a Mixture-of-Experts Transformer achieving 91.33% F1 for low-resource NLP hate speech detection, 94× lighter than BanglaBERT."
+        summary: "Built <strong>BanglaHateCorpus</strong> — 168K Bangla hate speech instances from 8 platforms verified via human-linguist review and <strong>LLM-as-judge</strong> scoring — and <strong>BanHateFormer</strong>, a <strong>Mixture-of-Experts</strong> Transformer achieving 91.33% F1 at 94× smaller scale than BanglaBERT for deployable <strong>NLP-based content moderation</strong>."
 
       - title: "1st Runner Up, HULT Prize at BUET"
         date: 2026-02
         awarder: BUET
         url: https://www.facebook.com/hult.prize.buet
-        summary: "Co-developed ATLAS, a multimodal AI tutoring platform combining Vision Transformer OCR, Bayesian Knowledge Tracing, and BanglaBERT-based NLP grading for 24M underserved students."
+        summary: "Pitched <strong>ATLAS</strong>, a <strong>multimodal AI</strong> tutoring platform for 24M underserved students integrating <strong>Vision Transformer</strong> OCR, <strong>Bayesian Knowledge Tracing</strong>, and <strong>BanglaBERT-based NLP grading</strong>."
 
       - title: "2nd Runners Up, Research Poster Presentation"
         date: 2024-10
         awarder: BUET CSE Fest 2024
         url: https://www.facebook.com/profile.php?id=61566249745875
-        summary: "Designed a real-time multimodal threat detection system fusing NLP-based rumor classification with CNN+RNN CCTV video analysis to cross-validate incidents across 16 threat categories."
+        summary: "Designed a real-time <strong>multimodal threat detection</strong> system combining <strong>NLP-based rumor classification</strong>, <strong>CNN+RNN</strong> video analysis, and a confidence-scoring fusion module across 16 threat classes — intersecting <strong>Computer Vision</strong>, <strong>Natural Language Processing</strong>, and <strong>Multimodal AI</strong>."
