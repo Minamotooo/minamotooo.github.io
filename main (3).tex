@@ -1,0 +1,237 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+% Define blue color for links
+\definecolor{linkblue}{RGB}{0,0,255}
+\hypersetup{colorlinks=true,urlcolor=linkblue}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-7.5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Aurchi Chowdhury} \\ \vspace{4pt}
+    \small \raisebox{-0.1\height}\faEnvelope\ Dhaka, Bangladesh ~ \href{https://minamotooo.github.io/}{\raisebox{-0.2\height}\faGlobe\ \underline{minamotooo.github.io}} ~ \href{mailto:2105083@ugrad.cse.buet.ac.bd}{\raisebox{-0.2\height}\faEnvelope\  \underline{2105083@ugrad.cse.buet.ac.bd}} ~
+    \href{https://www.linkedin.com/in/aurchichowdhury/}{\raisebox{-0.2\height}\faLinkedin\ \underline{Aurchi Chowdhury}} ~
+    \href{https://github.com/Minamotooo}{\raisebox{-0.2\height}\faGithub\ \underline{Minamotooo}} ~
+    \vspace{-4pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bangladesh University of Engineering and Technology}{Nov 2022 -- Present}
+      {Bachelor of Engineering in Computer Science and Engineering $|$ CGPA: 3.88/4.00}{Dhaka, Bangladesh}
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Viqarunnisa Noon School and College}{Jan 2009 -- Dec 2021}
+      {High School $|$ GPA: 5.00/5.00 $|$ Board Scholarship}{Dhaka, Bangladesh}
+  \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+%-----------INTERESTS-----------
+\section{INTERESTS}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{Natural Language Processing $\cdot$ Multimodal AI $\cdot$ Computer Vision $\cdot$ Machine Learning $\cdot$ Mechanistic Interpretability}}
+ \end{itemize}
+\vspace{-10pt}
+
+%-----------PUBLICATIONS-----------
+\section{PUBLICATIONS}
+    \vspace{5pt}
+    \resumeSubHeadingListStart
+        \vspace{-2pt}\item
+        \begin{tabular*}{1.001\textwidth}{p{0.80\textwidth}@{\extracolsep{\fill}}r}
+          \small\href{https://github.com/azraihan/mul-vlm-mech-interp}{\textbf{\raisebox{-0.2\height}\faGithub\ Causal Localization of the English Pivot in LLaVA: Mechanistic VLM Analysis and Training-Free Multilingual Steering}} & \textbf{\small Jul 2026}\\
+        \end{tabular*}\vspace{-3pt}
+        \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+          \textit{\small \href{https://mellm.org/}{1st Workshop on Multilinguality in the Era of Large Language Models (MeLLM), ACL 2026} $|$ Archival} & \textit{\small San Diego, CA} \\
+        \end{tabular*}\vspace{-3pt}
+        \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+          \textit{\small \href{https://aclanthology.org/2026.mellm-1.25/}{\raisebox{-0.2\height}\faFilePdf\ ACL Anthology}} & \\
+        \end{tabular*}\vspace{-10pt}
+        \vspace{-2pt}\item
+        \begin{tabular*}{1.001\textwidth}{p{0.80\textwidth}@{\extracolsep{\fill}}r}
+          \small\href{https://github.com/azraihan/affordance_crystallization}{\textbf{\raisebox{-0.2\height}\faGithub\ Where Do Affordances Crystallize? Video vs.\ Image Self-Supervised Encoders for Embodied Perception}} & \textbf{\small Jun 2026}\\
+        \end{tabular*}\vspace{-3pt}
+        \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+          \textit{\small \href{https://embodied-ai.org/cvpr2026/}{7th Annual Embodied AI (EAI) Workshop, CVPR 2026} $|$ Non-archival Poster} & \textit{\small Denver, CO} \\
+        \end{tabular*}\vspace{-3pt}
+        \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+          \textit{\small (To appear in Workshop website)} & \\
+        \end{tabular*}\vspace{-7pt}
+    \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+%-----------WORK EXPERIENCE-----------
+\section{WORK EXPERIENCE}
+  \resumeSubHeadingListStart
+    \vspace{0pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{Undergraduate Research Intern} & \small On-site \\
+      \small \textbf{Progya: Adaptive Tutoring Platform} $|$ Dept.\ of CSE, BUET (UGC-funded) & \textbf{\small Nov 2025 -- May 2026} \\
+    \end{tabular*}\vspace{-4pt}
+    \resumeItemListStart
+      \resumeItem{Developing an adaptive tutoring platform using Bayesian Knowledge Tracing (BKT), building learning pathways aligned with the Bangladesh Civil Service (BCS) exam syllabus.}
+      \resumeItem{Supervisors: \href{https://cse.buet.ac.bd/faculty/faculty_detail/mrahman}{Md. Saifur Rahman}, \href{https://cse.buet.ac.bd/faculty/faculty_detail/sharif}{Md. Shariful Islam Bhuiyan}}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \vspace{5pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{\href{https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0}{\raisebox{-0.2\height}\faGithub\ \underline{Bengali Long-Form ASR and Diarization}} ~} $|$ \emph{PyTorch, Whisper, Pyannote, Silero VAD}}{Mar 2026}
+          \resumeItemListStart
+            \resumeItem{Tackled low-resource Bengali \textbf{Natural Language Processing} by building \textbf{WhisperAlign} — a \textbf{cross-attention}-guided word-boundary-aware chunker for fine-tuning \textbf{Whisper-medium} on Bengali ASR — and domain-adapting \textbf{Pyannote}'s segmentation head with \textbf{Dual-VAD intersection} for speaker diarization.}
+            \resumeItem{\href{https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0}{\faGithub\ Code} $|$ \href{https://arxiv.org/abs/2603.04809}{\faFilePdf\ Paper} $|$ \href{https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0/blob/main/Presentation.pdf}{\faFilePowerpoint\ Slides}}
+          \resumeItemListEnd\vspace{-3pt}
+        \resumeProjectHeading
+          {\textbf{\href{https://github.com/Minamotooo/MemoryLane}{\raisebox{-0.2\height}\faGithub\ \underline{MemoryLane}} ~} $|$ \emph{PyTorch, ConvNeXt, U-Net, PatchGAN, VGG}}{Apr 2026}
+          \resumeItemListStart
+            \resumeItem{Approached grayscale colorization as a \textbf{Computer Vision} problem of conditional image generation in CIELab space, building a \textbf{ConvNeXt-Base encoder–U-Net decoder} with a \textbf{PatchGAN} discriminator; mitigated the gray-mean bias endemic to deep colorization via colorfulness-filtered training and a composite \textbf{perceptual + adversarial loss} (VGG + PatchGAN).}
+            \resumeItem{\href{https://github.com/Minamotooo/MemoryLane}{\faGithub\ Code} $|$ \href{https://github.com/Minamotooo/MemoryLane/blob/main/MemoryLane.pdf}{\faFilePowerpoint\ Slides}}
+          \resumeItemListEnd\vspace{-3pt}
+        \resumeProjectHeading
+          {\textbf{\href{https://youtu.be/4RdSLmTVIiQ?si=WxHNnqUjH9Bf0_Kv}{\raisebox{-0.2\height}\faGithub\ \underline{Scramble}} ~} $|$ \emph{ATMega32, SG90 servo motors, HC-05 Bluetooth module, Kotlin}}{Jul 2025}
+          \resumeItemListStart
+            \resumeItem{Developed a Fully Automated Rubik's Cube Solver capable of generating solutions in a maximum of 20 moves.}
+          \resumeItemListEnd
+          \href{https://youtu.be/4RdSLmTVIiQ?si=WxHNnqUjH9Bf0_Kv}{\raisebox{-0.2\height}\faYoutube\ \underline{Project Demonstration}}\vspace{-3pt}
+        \resumeProjectHeading
+          {\textbf{\href{https://github.com/Minamotooo/On-the-road}{\raisebox{-0.2\height}\faGithub\ \underline{On the Road}} ~} $|$ \emph{Node, Express, React, PostgreSQL}}{Mar 2024}
+          \resumeItemListStart
+            \resumeItem{Built a full-stack travel planning platform covering accommodations, dining, attractions, and tour guides.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+\section{ACHIEVEMENTS}
+    \vspace{5pt}
+    \resumeSubHeadingListStart
+        \resumeItemListStart
+            \resumeItem{\href{https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0}{\raisebox{-0.2\height}\faGithub\ \textbf{11th / 124, DL Sprint 4.0 — Bengali Long-Form ASR \& Diarization $|$ BUET CSE Fest 2026}} \hfill \textbf{Mar 2026} \\ \small 7th / 124 in ASR and 4th / 124 in Diarization; built \textbf{WhisperAlign} for low-resource Bengali ASR and \\domain-adapted \textbf{Pyannote} with \textbf{Dual-VAD intersection} for speaker diarization.}
+            \resumeItem{\href{https://www.facebook.com/events/1499256075247393/}{\raisebox{-0.2\height}\faGlobe\ \textbf{1st Runner Up, ResearchSpark 3 Minute Thesis Competition $|$ BUET}} \hfill \textbf{Apr 2026} \\ \small Built \textbf{BanglaHateCorpus} (168K instances) and \textbf{BanHateFormer} — a \textbf{Mixture-of-Experts} Transformer \\achieving 91.33\% F1 at 94$\times$ smaller scale than BanglaBERT for \textbf{NLP-based content moderation}.}
+            \resumeItem{\href{https://www.facebook.com/hult.prize.buet}{\raisebox{-0.2\height}\faGlobe\ \textbf{1st Runner Up, HULT Prize at BUET}} \hfill \textbf{Feb 2026} \\ \small Pitched \textbf{ATLAS}, a \textbf{multimodal AI} tutoring platform integrating \textbf{Vision Transformer} OCR, \\\textbf{Bayesian Knowledge Tracing}, and \textbf{BanglaBERT-based NLP grading} for 24M underserved students.}
+            \resumeItem{\href{https://www.facebook.com/share/p/1GGn7uXcx9/}{\raisebox{-0.2\height}\faGlobe\ \textbf{2nd Runners Up, Research Poster Presentation $|$ BUET CSE Fest 2024}} \hfill \textbf{Oct 2024} \\ \small Designed a real-time \textbf{multimodal threat detection} system combining \textbf{NLP-based rumor classification}, \textbf{CNN+RNN} video analysis, and a confidence-scoring fusion module across 16 threat classes.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+\end{document}
