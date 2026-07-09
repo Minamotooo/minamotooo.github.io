@@ -9,8 +9,9 @@
   address   = {San Diego, California},
   publisher = {Association for Computational Linguistics},
   abbr      = {ACL},
-  note      = {<span style="color:#27ae60;font-weight:600;">Accepted</span> · <u><b>Archival</b></u><br><small style="color:#888;">To appear in the ACL Anthology after proceedings are finalized. Will be available soon.</small>},
+  note      = {<span style="color:#27ae60;font-weight:600;">Accepted</span> · <u><b>Archival</b></u>},
   abstract  = {Multilingual vision-language models (VLMs) consistently underperform on non-English visual queries, yet the internal mechanism behind this disparity remains unknown. As a focused case study on LLaVA-1.5-7B, we apply logit-lens analysis and causal activation patching to show that non-English visual queries are routed through an English-biased representational bottleneck in layers 5–17, extending the English-pivot phenomenon of Wendler et al. (2024) to the multimodal setting. Peak causal influence occurs at layer 8 (AIE=0.49, averaged across languages), with all measurable pivot signal running through text-token positions. Without meaningful visual content (blank-image condition), language-specific representations do not emerge at any layer, showing that the pivot is image-content-dependent rather than triggered by any visual input. Building on these findings, we derive training-free language-steering vectors at the mechanistically identified pivot layers, improving Russian VQA by +6.5 pp and Portuguese by +4.0 pp on MMMB without any fine-tuning — the latter surpassing the English baseline.},
+  html      = {https://aclanthology.org/2026.mellm-1.25/},
   code      = {https://github.com/azraihan/mul-vlm-mech-interp},
   keywords  = {mechanistic interpretability, vision-language models, multilingual NLP, English pivot, activation patching, LLaVA},
   selected  = {true}
