@@ -59,7 +59,7 @@ cv:
         start_date: 2025-11
         end_date: 2026-09
         highlights:
-          - Developed an adaptive tutoring platform using Bayesian Knowledge Tracing (BKT), building learning pathways aligned with the Higher Secondary Certificate (HSC) exam syllabus.
+          - Developed an adaptive tutoring platform using Bayesian Knowledge Tracing (BKT), which builds learning pathways aligned with the Higher Secondary Certificate (HSC) exam syllabus.
           - "Supervisor: <a href='https://cse.buet.ac.bd/faculty/faculty_detail/sharif' target='_blank'>Md. Shariful Islam Bhuiyan</a>"
           - "Code: <a href='https://github.com/Minamotooo/ATLAS' target='_blank'>github.com/Minamotooo/ATLAS</a>"
 
@@ -68,7 +68,7 @@ cv:
         summary: "PyTorch, Whisper, Pyannote, Silero VAD, whisper-timestamped"
         url: https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0
         highlights:
-          - Built WhisperAlign — a word-boundary-aware chunker that extracts per-word timestamps from Whisper's own cross-attention alignment heads, requiring no external tools or boundary annotations, and greedily assembles fixed-length segments that never break mid-word.
+          - Built WhisperAlign, a word-boundary-aware chunker that extracts per-word timestamps from Whisper's own cross-attention alignment heads, requiring no external tools or boundary annotations, and greedily assembles fixed-length segments that never break mid-word.
           - Fine-tuned a Whisper-medium Bengali ASR model on the resulting chunks for low-resource Natural Language Processing.
           - Domain-adapted Pyannote for Bengali speaker diarization by fine-tuning only its segmentation head on Bengali conversational audio, without disturbing the language-agnostic embedding space.
           - Introduced a Dual-VAD intersection (Pyannote ∩ Silero VAD) retaining only segments confirmed by an independent speech boundary detector.
@@ -78,9 +78,9 @@ cv:
         summary: "PyTorch, ConvNeXt, U-Net, PatchGAN, VGG"
         url: https://github.com/Minamotooo/MemoryLane
         highlights:
-          - Framed grayscale-to-color mapping as a Computer Vision problem of conditional image generation in the CIELab color space.
+          - Approached grayscale image colorization as a Computer Vision problem of conditional image generation in CIELab color space.
           - Built a ConvNeXt-Base encoder–U-Net decoder with a PatchGAN discriminator.
-          - Addressed the gray-mean bias endemic to deep colorization models via colorfulness-filtered training data and a composite perceptual + adversarial loss (VGG + PatchGAN).
+          - Reduced the dull, grayish outputs common in colorization models by training on colorfulness-filtered data with a combined perceptual + adversarial loss (VGG + PatchGAN).
         start_date: 2026-04
 
       - name: Scramble
@@ -88,7 +88,7 @@ cv:
         url: https://github.com/Fanboyingeneral/SCRAMBLE/
         highlights:
           - Developed a Fully Automated Rubik's Cube Solver capable of generating solutions in a maximum of 20 moves.
-          - "Demo: <a href='https://youtu.be/4RdSLmTVIiQ?si=WxHNnqUjH9Bf0_Kv' target='_blank'>Project Demonstration</a>"
+          - "<a href='https://youtu.be/4RdSLmTVIiQ?si=WxHNnqUjH9Bf0_Kv' target='_blank'><i class='fa-brands fa-youtube'></i> Project demo</a>"
         start_date: 2025-07
 
       - name: On the Road
@@ -99,7 +99,7 @@ cv:
         start_date: 2024-03
 
     Awards:
-      - title: "11th / 124, DL Sprint 4.0 — Bengali Long-Form ASR & Diarization"
+      - title: "11th / 124, DL Sprint 4.0: Bengali Long-Form ASR & Diarization"
         date: 2026-03
         awarder: BUET CSE Fest 2026
         url: https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0
@@ -109,7 +109,7 @@ cv:
         date: 2026-04
         awarder: BUET
         url: https://www.facebook.com/events/1499256075247393/
-        summary: "Built <strong>BanglaHateCorpus</strong> — 168K Bangla hate speech instances from 8 platforms verified via human-linguist review and <strong>LLM-as-judge</strong> scoring — and <strong>BanHateFormer</strong>, a <strong>Mixture-of-Experts</strong> Transformer achieving 91.33% F1 at 94× smaller scale than BanglaBERT for deployable <strong>NLP-based content moderation</strong>."
+        summary: "Built <strong>BanglaHateCorpus</strong> (168K Bangla hate speech instances from 8 platforms, verified via human-linguist review and <strong>LLM-as-judge</strong> scoring) and <strong>BanHateFormer</strong>, a <strong>Mixture-of-Experts</strong> Transformer achieving 91.33% F1 at 94× smaller scale than BanglaBERT for deployable <strong>NLP-based content moderation</strong>."
 
       - title: "1st Runner Up, HULT Prize at BUET"
         date: 2026-02
@@ -121,4 +121,4 @@ cv:
         date: 2024-10
         awarder: BUET CSE Fest 2024
         url: https://minamotooo.github.io/assets/pdf/Rumor_Verification_Poster.pdf
-        summary: "Designed a real-time <strong>multimodal threat detection</strong> system combining <strong>NLP-based rumor classification</strong>, <strong>CNN+RNN</strong> video analysis, and a confidence-scoring fusion module across 16 threat classes — intersecting <strong>Computer Vision</strong>, <strong>Natural Language Processing</strong>, and <strong>Multimodal AI</strong>."
+        summary: "Designed a real-time <strong>multimodal threat detection</strong> system combining <strong>NLP-based rumor classification</strong>, <strong>CNN+RNN</strong> video analysis, and a confidence-scoring fusion module across 16 threat classes, intersecting <strong>Computer Vision</strong>, <strong>Natural Language Processing</strong>, and <strong>Multimodal AI</strong>."

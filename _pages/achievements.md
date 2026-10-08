@@ -16,17 +16,19 @@ nav_order: 4
 }
 
 .achievement-card {
-  border-radius: 0.75rem;
+  border-radius: var(--af-radius);
   overflow: hidden;
   border: 1px solid var(--global-divider-color);
   background: var(--global-card-bg-color);
+  box-shadow: var(--af-card-shadow);
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .achievement-card:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  border-color: var(--af-accent-border);
+  box-shadow: var(--af-card-shadow-hover);
 }
 
 .achievement-card img {
@@ -59,9 +61,9 @@ nav_order: 4
   font-weight: 600;
   padding: 3px 10px 3px 8px;
   border-radius: 999px;
-  background: color-mix(in srgb, #f59e0b 15%, transparent);
-  color: #f59e0b;
-  border: 1px solid #f59e0b55;
+  background: var(--af-gold-soft);
+  color: var(--af-gold);
+  border: 1px solid var(--af-gold-border);
 }
 
 .achievement-award-badge::before {
@@ -70,23 +72,25 @@ nav_order: 4
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #f59e0b;
+  background: var(--af-gold);
   flex-shrink: 0;
 }
 
 .achievement-tag {
-  font-size: 0.75rem;
+  font-family: var(--af-font-mono);
+  font-size: 0.7rem;
   font-weight: 400;
   padding: 2px 9px;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 1px solid var(--global-divider-color);
   color: var(--global-text-color-light);
   background: transparent;
 }
 
 .achievement-title {
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-family: var(--af-font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
   color: var(--global-text-color);
   margin: 0;
   line-height: 1.35;

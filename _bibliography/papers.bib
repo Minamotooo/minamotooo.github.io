@@ -31,15 +31,3 @@
   keywords  = {affordance detection, self-supervised learning, video encoders, mechanistic interpretability, embodied AI, V-JEPA, DINOv2},
   selected  = {true}
 }
-
-@inproceedings{raihan2026spatialcot,
-  title     = {{SpatialCoT}: Chain-of-Thought Spatial Grounding for Viewpoint-Robust {3D-LLMs}},
-  booktitle = {Proceedings of the 2nd Workshop on {3D-LLM/VLA}: Bridging Language, Vision and Action in 3D Environments at {CVPR} 2026},
-  year      = {2026},
-  month     = jun,
-  address   = {Denver, Colorado},
-  abbr      = {CVPR},
-  note      = {<span class="az-under-review" style="background:#fde8d8;color:#f0a060;font-weight:600;padding:1px 7px;border-radius:4px;font-size:0.82em;">Under Review</span><br><small style="color:#888;">arXiv preprint available soon.</small>},
-  abstract  = {Despite impressive performance on established 3D scene question-answering benchmarks, recent work reveals that state-of-the-art 3D large language models (3D-LLMs) exploit statistical patterns in training text rather than genuine spatial geometry. Ma et al. show that leading models lose up to 92% of their accuracy when scenes are presented under systematic viewpoint rotations — a failure mode inconsistent with true geometric understanding. We propose SpatialCoT (Spatial Chain-of-Thought), which addresses this by requiring the model to reason through five grounded steps — Localize, Orient, Enumerate, Compute, Answer — before producing its response. To train this behavior without manual annotation, we build an automatic pipeline that generates ~8,000 CoT-annotated training samples from ProcTHOR procedural scenes rendered with AI2-THOR. SpatialCoT improves Real-3DQA accuracy and reduces the relative accuracy drop at 180° scene rotation from 77% to 41%, demonstrating that grounding spatial reasoning in explicit intermediate steps yields a more robust 3D understanding.},
-  keywords  = {3D scene question answering, chain-of-thought reasoning, spatial grounding, viewpoint robustness, vision-language models, LoRA}
-}

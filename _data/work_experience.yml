@@ -1,11 +1,16 @@
 - role: Undergraduate Research Intern
-  project: "Progya: Adaptive Tutoring Platform"
-  subtitle: "UGC-funded project, Department of CSE, BUET"
-  period: "Nov '25 – May '26"
+  project: "ATLAS: Adaptive Tutoring & Learning Assessment System"
+  subtitle: "<a href='https://atlas-indol-one.vercel.app/' target='_blank'>ATLAS: Adaptive Tutoring &amp; Learning Assessment System</a>, Department of CSE, BUET"
+  period: "Nov '25 – Sep '26"
   tags: ["Dhaka, Bangladesh", "On-site"]
-  description: "A funded adaptive tutoring platform using <strong>Bayesian Knowledge Tracing (BKT)</strong>, developing and refining learning pathways aligned with the <strong>Bangladesh Civil Service (BCS) exam syllabus</strong>."
+  description: "Developed an adaptive tutoring platform using <strong>Bayesian Knowledge Tracing (BKT)</strong>, which builds learning pathways aligned with the <strong>Higher Secondary Certificate (HSC) exam syllabus</strong>."
+  links:
+    - label: Website
+      url: "https://atlas-indol-one.vercel.app/"
+      icon: "fa-solid fa-globe"
+    - label: Code
+      url: "https://github.com/Minamotooo/ATLAS"
+      icon: "fa-brands fa-github"
   supervisors:
-    - name: "Prof. Dr. Mohammad Saifur Rahman"
-      url: "https://cse.buet.ac.bd/faculty/faculty_detail/mrahman"
     - name: "Associate Prof. Mohammad Shariful Islam Bhuiyan"
       url: "https://cse.buet.ac.bd/faculty/faculty_detail/sharif"

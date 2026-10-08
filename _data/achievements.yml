@@ -1,4 +1,4 @@
-- title: "11th / 124, DL Sprint 4.0 — Bengali Long-Form ASR & Diarization"
+- title: "11th / 124, DL Sprint 4.0: Bengali Long-Form ASR & Diarization"
   subtitle: "<span style='color: var(--global-text-color); font-style: italic; opacity: 0.6; text-decoration: underline;'>7th / 124 in</span> <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-long-form-speech-recognition/leaderboard' target='_blank' style='margin-left: 4px;'><i class='fa-brands fa-kaggle' style='margin-right: 2px;'></i> ASR</a><br><span style='color: var(--global-text-color); font-style: italic; opacity: 0.6; text-decoration: underline;'>4th / 124 in</span> <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-speaker-diarization-challenge/leaderboard' target='_blank' style='margin-left: 4px;'><i class='fa-brands fa-kaggle' style='margin-right: 2px;'></i> Diarization</a>"
   image: dl_sprint.jpg
   award: "11th / 124 Overall"
@@ -7,7 +7,7 @@
     - "Kaggle"
   organization: "BUET CSE Fest 2026"
   date: "March 2026"
-  description: "Tackled low-resource Natural Language Processing for Bengali long-form audio across two tracks: for <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-long-form-speech-recognition/leaderboard' target='_blank'>ASR</a>, built WhisperAlign — a word-boundary-aware chunker using Whisper's cross-attention alignment heads — and fine-tuned a Whisper-medium Bengali ASR model; for <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-speaker-diarization-challenge/leaderboard' target='_blank'>diarization</a>, applied Machine Learning domain adaptation by fine-tuning Pyannote's segmentation head on Bengali conversational speech, paired with a Dual-VAD intersection for noise-robust boundary detection.<br><a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0' target='_blank'><i class='fa-brands fa-github' style='margin-right: 4px;'></i>Code</a> · <a href='https://arxiv.org/abs/2603.04809' target='_blank'><i class='ai ai-arxiv' style='margin-right: 4px;'></i>Paper</a> · <a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0/blob/main/Presentation.pdf' target='_blank'><i class='fa-solid fa-file-powerpoint' style='margin-right: 4px;'></i>Slides</a>"
+  description: "Tackled low-resource Natural Language Processing for Bengali long-form audio across two tracks: for <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-long-form-speech-recognition/leaderboard' target='_blank'>ASR</a>, built WhisperAlign, a word-boundary-aware chunker using Whisper's cross-attention alignment heads, and fine-tuned a Whisper-medium Bengali ASR model; for <a href='https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-speaker-diarization-challenge/leaderboard' target='_blank'>diarization</a>, applied Machine Learning domain adaptation by fine-tuning Pyannote's segmentation head on Bengali conversational speech, paired with a Dual-VAD intersection for noise-robust boundary detection.<br><a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0' target='_blank'><i class='fa-brands fa-github' style='margin-right: 4px;'></i>Code</a> · <a href='https://arxiv.org/abs/2603.04809' target='_blank'><i class='ai ai-arxiv' style='margin-right: 4px;'></i>Paper</a> · <a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0/blob/main/Presentation.pdf' target='_blank'><i class='fa-solid fa-file-powerpoint' style='margin-right: 4px;'></i>Slides</a>"
   keywords:
     - "Natural Language Processing"
     - "Machine Learning"
@@ -23,7 +23,7 @@
     - "ResearchSpark"
   organization: "Bangladesh University of Engineering and Technology (BUET)"
   date: "April 2026"
-  description: "Presented BanglaHateCorpus — a unified Bangla hate speech dataset of 168K instances from 8 social media platforms, with a verification pipeline combining human-linguist review and LLM-as-judge scoring. Presented BanHateFormer, a lightweight Transformer with Mixture-of-Experts feed-forward layers targeting 91.33% F1-score at 94× smaller scale than BanglaBERT, toward deployable NLP-based content moderation for 242 million Bangla speakers."
+  description: "Presented BanglaHateCorpus, a unified Bangla hate speech dataset of 168K instances from 8 social media platforms, with a verification pipeline combining human-linguist review and LLM-as-judge scoring. Presented BanHateFormer, a lightweight Transformer with Mixture-of-Experts feed-forward layers targeting 91.33% F1-score at 94× smaller scale than BanglaBERT, toward deployable NLP-based content moderation for 242 million Bangla speakers."
   keywords:
     - "BanglaHateCorpus"
     - "168K instances"
@@ -41,7 +41,7 @@
     - "BUET CSE Fest 2024"
   organization: "Bangladesh University of Engineering and Technology (BUET)"
   date: "October 2024"
-  description: "Designed a real-time multimodal threat detection system that cross-validates social media text with government CCTV footage. The pipeline combines NLP-based rumor classification, CNN+RNN video frame analysis, and a confidence-scoring fusion module to categorize incidents into 16 threat classes — intersecting Computer Vision, Natural Language Processing, and Multimodal AI for public safety."
+  description: "Designed a real-time multimodal threat detection system that cross-validates social media text with government CCTV footage. The pipeline combines NLP-based rumor classification, CNN+RNN video frame analysis, and a confidence-scoring fusion module to categorize incidents into 16 threat classes, intersecting Computer Vision, Natural Language Processing, and Multimodal AI for public safety.<br><a href='/assets/pdf/Rumor_Verification_Poster.pdf' target='_blank'><i class='fa-solid fa-file-pdf' style='margin-right: 4px;'></i>Poster</a>"
   keywords:
     - "multimodal threat detection"
     - "NLP-based rumor classification"
@@ -58,7 +58,7 @@
     - "HULT Prize"
   organization: "Bangladesh University of Engineering and Technology (BUET)"
   date: "February 2026"
-  description: "Pitched ATLAS, an AI-powered adaptive tutoring platform targeting 24 million underserved Bangladeshi students. The proposed system integrates handwritten script OCR via Vision Transformers, Bayesian Knowledge Tracing for personalized learning paths, and BanglaBERT-based NLP grading — a multimodal machine learning approach to democratizing quality education."
+  description: "Pitched ATLAS, an AI-powered adaptive tutoring platform targeting 24 million underserved Bangladeshi students. The proposed system integrates handwritten script OCR via Vision Transformers, Bayesian Knowledge Tracing for personalized learning paths, and BanglaBERT-based NLP grading, taking a multimodal machine learning approach to democratizing quality education."
   keywords:
     - "ATLAS"
     - "Vision Transformers"

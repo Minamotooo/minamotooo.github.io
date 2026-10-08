@@ -1,27 +1,1084 @@
-.profile {
-  width: 40% !important;
-  max-width: 340px !important;
+/* ==========================================================================
+   Site design layer on top of al-folio.
+   A flat, professional look: no gradients, no drop shadows.
+   Fonts: Newsreader (headings), Inter (text), JetBrains Mono (small labels).
+   Colors: magenta-pink accent on white; green accent on charcoal in dark mode.
+   Motion (cursor, achievement-card tilt, reveals) lives in assets/js/custom.js
+   and switches off for touch devices and for prefers-reduced-motion.
+   ========================================================================== */
+
+/* ---------- Tokens ---------- */
+:root {
+  --af-font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --af-font-serif: "Newsreader", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --af-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --global-font-family: var(--af-font-sans);
+
+  /* Light mode: a soft warm-gray page so white cards, borders and tags stand out */
+  --global-bg-color: #f3f0f2;
+  --global-card-bg-color: #ffffff;
+  --global-text-color: #17141b;
+  --global-text-color-light: #4d4854;
+  --global-theme-color: #b509ac;
+  --global-hover-color: #8e0787;
+  --global-hover-text-color: #ffffff;
+  --global-divider-color: #d8d1d6;
+  --global-code-bg-color: #f7e6f4;
+  --global-highlight-color: #b509ac;
+  --global-distill-app-color: #4d4854;
+  --global-footer-bg-color: #f3f0f2;
+  --global-footer-text-color: #4d4854;
+  --global-footer-link-color: #b509ac;
+  --global-back-to-top-bg-color: #17141b;
+  --global-back-to-top-text-color: #ffffff;
+
+  --af-nav-bg: #ffffff;
+  --af-accent-soft: #f8e1f5;
+  --af-accent-border: #dfa9d8;
+  --af-chip-text: #6a1f64;
+  --af-success: #1d7a46;
+  --af-gold: #875800;
+  --af-gold-soft: #f8f0df;
+  --af-gold-border: #e8d4a8;
+  --af-radius: 10px;
+  /* Shadow tokens kept for pages that reference them; the flat design uses none. */
+  --af-card-shadow: none;
+  --af-card-shadow-hover: none;
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #0f1216;
+  --global-card-bg-color: #151a20;
+  --global-text-color: #e5e8ec;
+  --global-text-color-light: #98a1ac;
+  --global-theme-color: #5fd39b;
+  --global-hover-color: #8ae2b8;
+  --global-hover-text-color: #0f1216;
+  --global-divider-color: #262c34;
+  --global-code-bg-color: #16211c;
+  --global-highlight-color: #5fd39b;
+  --global-distill-app-color: #98a1ac;
+  --global-footer-bg-color: #0f1216;
+  --global-footer-text-color: #98a1ac;
+  --global-footer-link-color: #5fd39b;
+  --global-back-to-top-bg-color: #e5e8ec;
+  --global-back-to-top-text-color: #0f1216;
+
+  --af-nav-bg: #0f1216;
+  --af-accent-soft: #13211a;
+  --af-accent-border: #285a42;
+  --af-chip-text: #bfe5d0;
+  --af-success: #5fd39b;
+  --af-gold: #e8bd62;
+  --af-gold-soft: #241d10;
+  --af-gold-border: #4a3a18;
+}
+
+/* ---------- Base ---------- */
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--af-font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--af-font-serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--global-text-color);
+}
+
+h5,
+h6 {
+  font-family: var(--af-font-sans);
+  color: var(--global-text-color);
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+a {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: var(--global-hover-color);
+}
+
+::selection {
+  background: var(--af-accent-border);
+  color: var(--global-text-color);
 }
 
 ul.timeline li {
   list-style: none;
 }
 
-:root {
-  --global-font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+/* ---------- Navigation ---------- */
+body.fixed-top-nav {
+  padding-top: 72px;
 }
 
-body {
-  font-family: var(--global-font-family);
+.navbar {
+  background-color: var(--af-nav-bg) !important;
+  border-bottom: 1px solid var(--global-divider-color) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
 }
 
-html[data-theme="dark"] {
-  --global-theme-color: #c9b8ff;
-  --global-hover-color: #c9b8ff;
-  --global-hover-text-color: #1c1c1d;
-  --global-code-bg-color: rgba(201, 184, 255, 0.08);
+.navbar.navbar-light .navbar-brand {
+  font-family: var(--af-font-serif);
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+.navbar.navbar-light .navbar-brand .font-weight-bold {
+  font-weight: 600 !important;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  color: var(--global-text-color-light);
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
+  color: var(--global-text-color);
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  color: var(--global-theme-color);
+  font-weight: 600;
+}
+
+@media (min-width: 576px) {
+  .navbar.navbar-light .navbar-nav .nav-item > .nav-link {
+    position: relative;
+  }
+
+  .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: -2px;
+    height: 2px;
+    background: var(--global-theme-color);
+  }
+}
+
+/* ---------- Page headers ---------- */
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  font-family: var(--af-font-serif);
+  font-size: clamp(2.1rem, 1.6rem + 2vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.post-description {
+  font-size: 1rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 0;
+}
+
+/* ---------- Footer ---------- */
+footer.sticky-bottom {
+  margin-top: 4.5rem !important;
+  padding: 2rem 0 2.5rem;
+  border-top: 1px solid var(--global-divider-color);
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+}
+
+footer.sticky-bottom a {
+  color: var(--global-text-color-light);
+  text-decoration: underline;
+  text-decoration-color: var(--global-divider-color);
+}
+
+footer.sticky-bottom a:hover {
+  color: var(--global-theme-color);
+}
+
+footer.fixed-bottom {
+  background-color: var(--global-bg-color);
+  border-top: 1px solid var(--global-divider-color);
+}
+
+/* ---------- Buttons, link pills, tags ---------- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.15rem;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 8px;
+  background: var(--global-theme-color);
+  color: var(--global-hover-text-color) !important;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.btn-primary:hover {
+  border-color: var(--global-hover-color);
+  background: var(--global-hover-color);
+}
+
+.btn-primary i {
+  font-size: 0.8em;
+  transition: transform 0.15s ease;
+}
+
+.btn-primary:hover i {
+  transform: translateX(3px);
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.pill-link i {
+  font-size: 0.95em;
+}
+
+.pill-link:hover {
+  color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+.tech-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tech-list li {
+  padding: 0.12rem 0.5rem;
+  border-radius: 5px;
+  background: var(--af-accent-soft);
+  color: var(--af-chip-text);
+  font-family: var(--af-font-mono);
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+/* ---------- Cards (flat) ---------- */
+.af-card {
+  padding: 1.35rem 1.5rem 1.3rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: var(--af-radius);
+  background: var(--global-card-bg-color);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.af-card:hover {
+  border-color: var(--af-accent-border);
+  transform: translateY(-2px);
+}
+
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ---------- About: hero ---------- */
+/* Rows: name, bio, buttons (the text wrapper uses display: contents so each is a grid row).
+   The photo sits in the right column starting on the bio row, so its top lines up with
+   the first line of the bio. */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  column-gap: 3.25rem;
+  align-content: center;
+  padding-top: 1rem;
+}
+
+.hero__text {
+  display: contents;
+}
+
+.hero__head {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hero__bio {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.hero__actions {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+/* On desktop the hero fills the first screen (below the navbar and page margin),
+   with the text-and-photo row centered in it. */
+@media (min-width: 768px) {
+  .hero {
+    min-height: calc(100vh - 7.5rem);
+    min-height: calc(100svh - 7.5rem);
+    padding-bottom: 3rem;
+  }
+}
+
+/* Scroll cue: an arrow pinned to the bottom of the screen while a page can still be scrolled.
+   custom.js adds it to every page that is taller than the screen and hides it once scrolling starts. */
+.scroll-cue {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 20;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 50%;
+  background: var(--global-card-bg-color);
+  color: var(--global-theme-color);
+  font-size: 0.9rem;
+  line-height: 1;
+  transform: translateX(-50%);
+  transition:
+    opacity 0.3s ease,
+    border-color 0.15s ease;
+}
+
+html.cue-ready .scroll-cue {
+  display: inline-flex;
+}
+
+.scroll-cue i {
+  animation: af-nudge 2s ease-in-out infinite;
+}
+
+.scroll-cue:hover {
+  border-color: var(--global-theme-color);
+}
+
+.scroll-cue.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes af-nudge {
+  0%,
+  100% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+#home-content {
+  scroll-margin-top: 90px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero__name {
+  margin: 0 0 1.4rem;
+  font-family: var(--af-font-serif);
+  font-size: clamp(2.4rem, 1.8rem + 2.4vw, 3.3rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.hero__subtitle {
+  margin: -0.85rem 0 1.6rem;
+  color: var(--global-text-color-light);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hero__bio p {
+  font-size: 1.03rem;
+  line-height: 1.75;
+  margin-bottom: 1.05rem;
+}
+
+.hero__bio .availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0.35rem 0 0;
+  padding: 0.45rem 0.95rem 0.45rem 0.8rem;
+  border: 1px solid var(--af-accent-border);
+  border-radius: 8px;
+  background: var(--af-accent-soft);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.hero__bio .availability::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--af-success);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  margin-top: 1.6rem;
+}
+
+/* 4:5 portrait, top-aligned with the name. */
+.hero__photo {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  align-self: start;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+}
+
+.hero__photo .hero__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.hero__photo--circle {
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.social.social--compact {
+  text-align: left;
+}
+
+.social.social--compact .contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.social.social--compact .contact-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color-light);
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.social.social--compact .contact-icons a i::before,
+.social.social--compact .contact-icons a:hover i::before {
+  color: inherit;
+}
+
+.social.social--compact .contact-icons a:hover {
+  color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 0.25rem;
+  }
+
+  /* Single column: photo first, then name, bio and buttons in source order. */
+  .hero__head,
+  .hero__bio,
+  .hero__actions,
+  .hero__photo {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .hero__photo {
+    order: -1;
+    width: 220px;
+    margin-bottom: 1.75rem;
+  }
+}
+
+/* ---------- About: sections ---------- */
+.home-section {
+  margin-top: 4rem;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.8rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.section-more {
+  flex: none;
+  color: var(--global-text-color-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.section-more:hover {
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+/* ---------- Project cards ---------- */
+.project-card__title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.project-card__kicker {
+  margin: 0.3rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.85rem;
+}
+
+.project-card__summary,
+.project-card__points {
+  margin: 0.85rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.project-card__points {
+  padding-left: 1.15rem;
+}
+
+.project-card__points li {
+  margin-bottom: 0.45rem;
+  padding-left: 0.2rem;
+}
+
+.project-card__points li::marker {
+  color: var(--global-theme-color);
+}
+
+.project-card__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-top: 1.1rem;
+}
+
+.project-card__foot:empty {
+  display: none;
+}
+
+/* Projects page: year in a left gutter, cards on the right */
+.project-year {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.project-year:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.project-year__label {
+  position: sticky;
+  top: 90px;
+  align-self: start;
+  margin: 0;
+  padding-top: 1.45rem;
+  color: var(--global-theme-color);
+  font-family: var(--af-font-mono);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.project-year__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .project-year {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .project-year__label {
+    position: static;
+    padding-top: 0;
+  }
+
+  .af-card {
+    padding: 1.15rem 1.15rem 1.1rem;
+  }
+}
+
+/* ---------- Work experience cards ---------- */
+.xp-card__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+}
+
+.xp-card__role {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.xp-card__period {
+  color: var(--global-text-color-light);
+  font-family: var(--af-font-mono);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.xp-card__org {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.xp-card__meta {
+  margin: 0.15rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.85rem;
+}
+
+.xp-card__desc {
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.xp-card__sup {
+  margin: 0.75rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.875rem;
+}
+
+.xp-card__sup a {
+  font-weight: 500;
+}
+
+.xp-card__links {
+  margin-top: 1rem;
+}
+
+/* ---------- Publications ---------- */
+.publications ol.bibliography li {
+  margin-bottom: 0;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.publications ol.bibliography li:first-child {
+  padding-top: 0.25rem;
+}
+
+.publications ol.bibliography li:last-child {
+  border-bottom: 0;
+}
+
+.publications ol.bibliography li .abbr abbr.badge {
+  display: inline-block;
+  width: auto;
+  padding: 0.28rem 0.6rem;
+  border: 1px solid var(--af-accent-border);
+  border-radius: 5px;
+  background: var(--af-accent-soft);
+  color: var(--global-theme-color) !important;
+  font-family: var(--af-font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.publications ol.bibliography li .title {
+  color: var(--global-text-color);
+  font-size: 1.04rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.publications ol.bibliography li .periodical {
+  margin-top: 0.2rem;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}
+
+.publications ol.bibliography li .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.publications ol.bibliography li .links a.btn {
+  margin: 0;
+  padding: 0.2rem 0.75rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.publications ol.bibliography li .links a.btn:hover {
+  border-color: var(--global-theme-color);
+  color: var(--global-theme-color);
+}
+
+.publications ol.bibliography li .hidden {
+  border-radius: 8px;
+}
+
+/* Open abstract/bibtex boxes: clear the buttons above and keep text off the border.
+   Spacing goes on the open state only, so collapsed boxes stay at zero height. */
+.publications ol.bibliography li div.hidden.open {
+  margin-top: 0.75rem;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-card-bg-color);
+}
+
+/* The theme gives open boxes a full-strength text-colored border; soften it to match the site. */
+.publications ol.bibliography li div.abstract.hidden.open,
+.publications ol.bibliography li div.bibtex.hidden.open {
+  border-color: var(--global-divider-color);
+}
+
+.publications ol.bibliography li .hidden p {
+  margin: 0.9rem 1rem;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.publications h2.bibliography {
+  margin: 0 0 0.5rem;
+  padding-top: 0;
+  border-top: 0;
+  color: var(--global-theme-color);
+  font-family: var(--af-font-mono);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+/* Narrow venue column so titles start right after the badge */
+@media (min-width: 576px) {
+  .publications ol.bibliography li > .row > .abbr {
+    flex: 0 0 6.5rem;
+    max-width: 6.5rem;
+  }
+
+  .publications ol.bibliography li > .row > .abbr + div {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .publications ol.bibliography li .abbr {
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* ---------- Resume (CV) page ---------- */
+.cv .card {
+  border: 1px solid var(--global-divider-color);
+  border-radius: var(--af-radius);
+  background: var(--global-card-bg-color);
+  box-shadow: none;
+  padding: 1.35rem 1.5rem !important;
+}
+
+.cv .card .card-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.cv .card .list-group {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cv .card .list-group-item {
+  list-style: none;
+  background: transparent;
+  border-color: var(--global-divider-color);
+}
+
+.cv .card .list-group-item .badge {
+  min-width: 0 !important;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--af-accent-border);
+  border-radius: 5px;
+  background-color: var(--af-accent-soft) !important;
+  color: var(--global-theme-color) !important;
+  font-family: var(--af-font-mono);
+  font-size: 0.7rem;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em;
+}
+
+.cv .card .list-group-item .location {
+  margin-top: 0.35rem;
+  color: var(--global-text-color-light);
+  font-size: 0.75rem;
+}
+
+.cv .card .list-group-item .title {
+  font-size: 1rem;
+  font-weight: 600 !important;
+}
+
+.cv .card .card-text {
+  font-size: 0.92rem;
+}
+
+/* ---------- Achievements: gentle 3D tilt (set by custom.js) ---------- */
+.achievement-card.tilt-card {
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.2s ease;
+}
+
+.achievement-card.tilt-card.is-tilting {
+  transition:
+    transform 0.12s linear,
+    border-color 0.2s ease;
+}
+
+.achievement-card img {
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.achievement-card:hover img {
+  transform: scale(1.04);
+}
+
+/* ---------- Custom cursor (desktop only; added by custom.js) ---------- */
+html.has-custom-cursor,
+html.has-custom-cursor * {
+  cursor: none !important;
+}
+
+html.has-custom-cursor input,
+html.has-custom-cursor textarea,
+html.has-custom-cursor [contenteditable] {
+  cursor: text !important;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+html.cursor-visible .cursor-dot,
+html.cursor-visible .cursor-ring {
+  opacity: 1;
+}
+
+.cursor-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--global-theme-color);
+  transition:
+    opacity 0.2s ease,
+    width 0.2s ease,
+    height 0.2s ease;
+}
+
+.cursor-dot.is-hover {
+  width: 4px;
+  height: 4px;
+}
+
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid color-mix(in srgb, var(--global-theme-color) 65%, transparent);
+  transition:
+    opacity 0.2s ease,
+    width 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+    height 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.cursor-ring.is-hover {
+  width: 54px;
+  height: 54px;
+  border-color: color-mix(in srgb, var(--global-theme-color) 35%, transparent);
+  background: color-mix(in srgb, var(--global-theme-color) 12%, transparent);
+}
+
+.cursor-ring.is-down {
+  width: 24px;
+  height: 24px;
+}
+
+/* ---------- Scroll reveal (classes added by custom.js) ---------- */
+.reveal-ready .reveal {
+  opacity: 0;
+  translate: 0 16px;
+  transition:
+    opacity 0.7s ease,
+    translate 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal-ready .reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* Cards keep their own hover/tilt transitions alongside the reveal */
+.reveal-ready .af-card.reveal {
+  transition:
+    opacity 0.7s ease,
+    translate 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.reveal-ready .achievement-card.reveal {
+  transition:
+    opacity 0.7s ease,
+    translate 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.2s ease;
+}
+
+.reveal-ready .achievement-card.reveal.is-tilting {
+  transition:
+    opacity 0.7s ease,
+    translate 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.12s linear,
+    border-color 0.2s ease;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .scroll-cue i {
+    animation: none;
+  }
+
+  .af-card:hover {
+    transform: none;
+  }
+
+  .achievement-card:hover img {
+    transform: none;
+  }
 }

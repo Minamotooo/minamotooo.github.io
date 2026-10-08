@@ -1,0 +1,47 @@
+{% comment %}
+  One project card, shared by the Projects page and the About page's "Selected Projects".
+  Usage: {% include project_card.liquid project=project %}
+  Reads title, description, bullets, github, demo, paper and tech from the project's front matter.
+{% endcomment %}
+{% assign p = include.project %}
+<article class="af-card project-card">
+  <header>
+    <h3 class="project-card__title">{{ p.title }}</h3>
+    {% if p.description %}
+      <p class="project-card__kicker">{{ p.description }}</p>
+    {% endif %}
+  </header>
+
+  {% if p.bullets.size == 1 %}
+    <p class="project-card__summary">{{ p.bullets[0] }}</p>
+  {% elsif p.bullets %}
+    <ul class="project-card__points">
+      {% for bullet in p.bullets %}
+        <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <footer class="project-card__foot">
+    {% if p.github or p.demo or p.paper %}
+      <div class="pill-row">
+        {% if p.github %}
+          <a class="pill-link" href="{{ p.github }}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>Code</a>
+        {% endif %}
+        {% if p.paper %}
+          <a class="pill-link" href="{{ p.paper }}" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i>Paper</a>
+        {% endif %}
+        {% if p.demo %}
+          <a class="pill-link" href="{{ p.demo }}" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i>Demo</a>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if p.tech and p.tech.size > 0 %}
+      <ul class="tech-list" aria-label="Tools used">
+        {% for tag in p.tech %}
+          <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </footer>
+</article>
