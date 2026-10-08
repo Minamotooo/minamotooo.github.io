@@ -13,7 +13,7 @@ cv:
   sections:
     Interests:
       - name: Research Interests
-        keywords: "Natural Language Processing · Multimodal AI · Computer Vision · Machine Learning · Mechanistic Interpretability"
+        keywords: "Representation Learning · Natural Language Processing · Multimodal AI · Computer Vision · Mechanistic Interpretability"
 
     Education:
       - institution: Bangladesh University of Engineering and Technology
@@ -50,17 +50,18 @@ cv:
         publisher: "7th Annual Embodied AI (EAI) Workshop, CVPR 2026 | Non-archival Poster"
         releaseDate: 2026-06
         url: https://github.com/azraihan/affordance_crystallization
-        summary: "Denver, CO"
+        summary: "Denver, CO · [PDF](https://embodied-ai.org/papers/2026/32_Where_Do_Affordances_Crysta.pdf)"
 
     Experience:
-      - company: "Progya: Adaptive Tutoring Platform, Dept. of CSE, BUET (UGC-funded)"
+      - company: "<a href='https://atlas-indol-one.vercel.app/' target='_blank'>ATLAS: Adaptive Tutoring &amp; Learning Assessment System</a>, Dept. of CSE, BUET"
         position: Undergraduate Research Intern
         location: Dhaka, Bangladesh
         start_date: 2025-11
-        end_date: 2026-05
+        end_date: 2026-09
         highlights:
-          - Developed an adaptive tutoring platform using Bayesian Knowledge Tracing (BKT), building learning pathways aligned with the Bangladesh Civil Service (BCS) exam syllabus.
-          - "Supervisors: <a href='https://cse.buet.ac.bd/faculty/faculty_detail/mrahman' target='_blank'>Md. Saifur Rahman</a>, <a href='https://cse.buet.ac.bd/faculty/faculty_detail/sharif' target='_blank'>Md. Shariful Islam Bhuiyan</a>"
+          - Developed an adaptive tutoring platform using Bayesian Knowledge Tracing (BKT), building learning pathways aligned with the Higher Secondary Certificate (HSC) exam syllabus.
+          - "Supervisor: <a href='https://cse.buet.ac.bd/faculty/faculty_detail/sharif' target='_blank'>Md. Shariful Islam Bhuiyan</a>"
+          - "Code: <a href='https://github.com/Minamotooo/ATLAS' target='_blank'>github.com/Minamotooo/ATLAS</a>"
 
     Projects:
       - name: Bengali Long-Form ASR and Diarization
@@ -84,9 +85,10 @@ cv:
 
       - name: Scramble
         summary: "ATMega32, SG90 servo motors, HC-05 Bluetooth module, Kotlin"
-        url: https://youtu.be/4RdSLmTVIiQ?si=WxHNnqUjH9Bf0_Kv
+        url: https://github.com/Fanboyingeneral/SCRAMBLE/
         highlights:
           - Developed a Fully Automated Rubik's Cube Solver capable of generating solutions in a maximum of 20 moves.
+          - "Demo: <a href='https://youtu.be/4RdSLmTVIiQ?si=WxHNnqUjH9Bf0_Kv' target='_blank'>Project Demonstration</a>"
         start_date: 2025-07
 
       - name: On the Road
@@ -118,5 +120,5 @@ cv:
       - title: "2nd Runners Up, Research Poster Presentation"
         date: 2024-10
         awarder: BUET CSE Fest 2024
-        url: https://www.facebook.com/profile.php?id=61566249745875
+        url: https://minamotooo.github.io/assets/pdf/Rumor_Verification_Poster.pdf
         summary: "Designed a real-time <strong>multimodal threat detection</strong> system combining <strong>NLP-based rumor classification</strong>, <strong>CNN+RNN</strong> video analysis, and a confidence-scoring fusion module across 16 threat classes — intersecting <strong>Computer Vision</strong>, <strong>Natural Language Processing</strong>, and <strong>Multimodal AI</strong>."
