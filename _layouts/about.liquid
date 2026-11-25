@@ -65,11 +65,67 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <section class="home-section">
+        {% assign coming_soon = site.data.coming_soon %}
         <div class="section-head">
-          <h2>Selected Publications</h2>
-          <a class="section-more" href="{{ '/publications/' | relative_url }}">All publications →</a>
+          <h2 id="pub-tabs-title">Selected Publications</h2>
+          {% if coming_soon.size > 0 %}
+            <div class="pub-tabs" role="group" aria-label="Show publications">
+              <button type="button" class="pub-tabs__btn is-active" data-show="selected" aria-pressed="true">Selected</button>
+              <button type="button" class="pub-tabs__btn" data-show="soon" aria-pressed="false">Coming Soon</button>
+            </div>
+          {% else %}
+            <a class="section-more" href="{{ '/publications/' | relative_url }}">All publications →</a>
+          {% endif %}
         </div>
-        {% include selected_papers.liquid %}
+        <div id="pub-tab-selected">
+          {% include selected_papers.liquid %}
+        </div>
+        {% if coming_soon.size > 0 %}
+          <div class="publications" id="pub-tab-soon" hidden>
+            <ol class="bibliography">
+              {% for paper in coming_soon %}
+                <li>
+                  <div class="row">
+                    <div class="col col-sm-2 abbr">
+                      <abbr class="badge rounded">Soon</abbr>
+                    </div>
+                    <div class="col-sm-10">
+                      <div class="title">{{ paper.title }}</div>
+                      <div class="links">
+                        <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                      </div>
+                      <div class="abstract hidden">
+                        <p>{{ paper.abstract }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+            </ol>
+          </div>
+          <script>
+            (function () {
+              var panels = { selected: document.getElementById('pub-tab-selected'), soon: document.getElementById('pub-tab-soon') };
+              var titles = { selected: 'Selected Publications', soon: 'Coming Soon' };
+              var title = document.getElementById('pub-tabs-title');
+              var buttons = document.querySelectorAll('.pub-tabs__btn');
+              buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                  var show = btn.dataset.show;
+                  buttons.forEach(function (b) {
+                    var on = b === btn;
+                    b.classList.toggle('is-active', on);
+                    b.setAttribute('aria-pressed', on);
+                  });
+                  Object.keys(panels).forEach(function (key) {
+                    panels[key].hidden = key !== show;
+                  });
+                  title.textContent = titles[show];
+                });
+              });
+            })();
+          </script>
+        {% endif %}
       </section>
     {% endif %}
 
