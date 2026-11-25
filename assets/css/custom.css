@@ -623,6 +623,11 @@ html {
   color: var(--global-theme-color);
 }
 
+/* Publications page: the toggle sits above the list */
+.pub-tabs--page {
+  margin-bottom: 1.75rem;
+}
+
 .publications ol.bibliography li .thesis-desc {
   margin: 0.35rem 0 0;
   color: var(--global-text-color);
