@@ -640,6 +640,24 @@ html {
   color: var(--global-theme-color);
 }
 
+.publications ol.bibliography li .thesis-desc {
+  margin: 0.35rem 0 0;
+  color: var(--global-text-color);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.publications ol.bibliography li .title + .thesis-desc {
+  margin-top: 0.6rem;
+}
+
+/* Three tabs plus the heading don't fit on one line on phones */
+@media (max-width: 575.98px) {
+  .section-head--tabs {
+    flex-wrap: wrap;
+  }
+}
+
 /* ---------- Project cards ---------- */
 .project-card__title {
   margin: 0;
