@@ -587,6 +587,42 @@ html {
   text-decoration: none;
 }
 
+/* About: Selected / Coming Soon publication tabs */
+.pub-tabs {
+  display: inline-flex;
+  flex: none;
+  align-self: center;
+  overflow: hidden;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+}
+
+.pub-tabs__btn {
+  padding: 0.3rem 0.85rem;
+  border: 0;
+  background: transparent;
+  color: var(--global-text-color-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.pub-tabs__btn + .pub-tabs__btn {
+  border-left: 1px solid var(--global-divider-color);
+}
+
+.pub-tabs__btn:hover {
+  color: var(--global-theme-color);
+}
+
+.pub-tabs__btn.is-active {
+  background: var(--af-accent-soft);
+  color: var(--global-theme-color);
+}
+
 /* ---------- Project cards ---------- */
 .project-card__title {
   margin: 0;
