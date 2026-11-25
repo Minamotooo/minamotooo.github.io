@@ -161,7 +161,32 @@
     update();
   }
 
+  /* ---------- Publication tabs (About and Publications pages) ----------
+     A [data-pub-tabs] block holds .pub-tabs__btn buttons and [data-pub-panel] panels; a button's
+     data-show names the panel it reveals. An optional [data-pub-tabs-title] takes the button's data-title. */
+  function initPubTabs() {
+    document.querySelectorAll("[data-pub-tabs]").forEach(function (group) {
+      var buttons = group.querySelectorAll(".pub-tabs__btn");
+      var panels = group.querySelectorAll("[data-pub-panel]");
+      var title = group.querySelector("[data-pub-tabs-title]");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          buttons.forEach(function (b) {
+            var on = b === btn;
+            b.classList.toggle("is-active", on);
+            b.setAttribute("aria-pressed", on);
+          });
+          panels.forEach(function (p) {
+            p.hidden = p.getAttribute("data-pub-panel") !== btn.getAttribute("data-show");
+          });
+          if (title && btn.getAttribute("data-title")) title.textContent = btn.getAttribute("data-title");
+        });
+      });
+    });
+  }
+
   function init() {
+    initPubTabs();
     initScrollCue();
     if (reduceMotion) return;
     initReveal();

@@ -64,7 +64,7 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <section class="home-section">
+      <section class="home-section" data-pub-tabs>
         {% assign coming_soon = site.data.coming_soon %}
         {% assign thesis = site.data.thesis %}
         {% assign has_soon = false %}
@@ -72,7 +72,7 @@ layout: default
         {% assign has_thesis = false %}
         {% if thesis.description %}{% assign has_thesis = true %}{% endif %}
         <div class="section-head{% if has_soon or has_thesis %} section-head--tabs{% endif %}">
-          <h2 id="pub-tabs-title">Selected Publications</h2>
+          <h2 data-pub-tabs-title>Selected Publications</h2>
           {% if has_soon or has_thesis %}
             <div class="pub-tabs" role="group" aria-label="Show publications">
               <button type="button" class="pub-tabs__btn is-active" data-show="selected" data-title="Selected Publications" aria-pressed="true">Selected</button>
@@ -113,29 +113,6 @@ layout: default
               </li>
             </ol>
           </div>
-        {% endif %}
-        {% if has_soon or has_thesis %}
-          <script>
-            (function () {
-              var title = document.getElementById('pub-tabs-title');
-              var panels = document.querySelectorAll('[data-pub-panel]');
-              var buttons = document.querySelectorAll('.pub-tabs__btn');
-              buttons.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                  var show = btn.dataset.show;
-                  buttons.forEach(function (b) {
-                    var on = b === btn;
-                    b.classList.toggle('is-active', on);
-                    b.setAttribute('aria-pressed', on);
-                  });
-                  panels.forEach(function (p) {
-                    p.hidden = p.dataset.pubPanel !== show;
-                  });
-                  title.textContent = btn.dataset.title;
-                });
-              });
-            })();
-          </script>
         {% endif %}
       </section>
     {% endif %}
