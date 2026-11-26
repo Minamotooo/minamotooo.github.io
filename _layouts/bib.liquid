@@ -46,7 +46,10 @@
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-10{% else %}col-sm-12{% endif %}">
+  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-10{% else %}col-sm-12{% endif %}{% if entry.teaser %} has-figure{% endif %}">
+    {% if entry.teaser %}
+      {% include pub_figure.liquid file=entry.teaser alt=entry.teaser_alt title=entry.title %}
+    {% endif %}
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
@@ -186,10 +189,6 @@
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
-
-    {% if entry.teaser %}
-      {% include pub_figure.liquid file=entry.teaser alt=entry.teaser_alt title=entry.title %}
-    {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">
