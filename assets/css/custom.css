@@ -623,39 +623,79 @@ html {
   color: var(--global-theme-color);
 }
 
-/* A paper's key figure under its title: framed on white (the figures have white backgrounds,
-   so this keeps them clean in dark mode too), height-capped, click to zoom. */
+/* A paper's key figure as a thumbnail: a fixed-size white frame (the figures have white
+   backgrounds, so they stay clean in dark mode too) with the whole figure fitted inside.
+   Wide screens: floated to the right of the entry. Narrow screens: stacked under the title.
+   Click to zoom. */
+.publications .has-figure {
+  display: flow-root;
+}
+
 .pub-figure {
-  width: fit-content;
-  max-width: 100%;
-  margin: 0.85rem 0 0.15rem;
-  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 6px;
   border: 1px solid var(--global-divider-color);
   border-radius: 8px;
   background: #fff;
   transition:
-    border-color 0.15s ease,
-    box-shadow 0.15s ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .pub-figure:hover {
   border-color: var(--af-accent-border);
-  box-shadow: 0 6px 20px -12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 22px -14px rgba(0, 0, 0, 0.45);
+  transform: translateY(-2px);
 }
 
 .pub-figure img {
   display: block;
   width: auto;
-  max-width: 100%;
   height: auto;
-  max-height: 300px;
-  border-radius: 4px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 3px;
   cursor: zoom-in;
 }
 
-@media (max-width: 575.98px) {
-  .pub-figure img {
-    max-height: 220px;
+@media (min-width: 768px) {
+  .pub-figure {
+    float: right;
+    width: 220px;
+    height: 140px;
+    margin: 0.15rem 0 0.75rem 1.5rem;
+  }
+
+  /* An opened Abstract/BibTeX box starts below the thumbnail instead of running under it */
+  .publications .has-figure > div.hidden.open {
+    clear: both;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .publications .has-figure {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .publications .has-figure > * {
+    order: 2;
+  }
+
+  .publications .has-figure > .title {
+    order: 0;
+  }
+
+  .publications .has-figure > .pub-figure {
+    order: 1;
+    width: 100%;
+    height: 170px;
+    margin: 0.7rem 0 0.2rem;
   }
 }
 
