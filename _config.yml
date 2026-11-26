@@ -398,6 +398,8 @@ filtered_bibtex_keywords:
     selected,
     slides,
     supp,
+    teaser,
+    teaser_alt,
     video,
     website,
   ]

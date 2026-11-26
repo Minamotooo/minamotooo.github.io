@@ -10,7 +10,7 @@ nav_order: 2
 <div data-pub-tabs>
 <div class="pub-tabs pub-tabs--page" role="group" aria-label="Show publications">
 <button type="button" class="pub-tabs__btn is-active" data-show="published" aria-pressed="true">Published</button>
-<button type="button" class="pub-tabs__btn" data-show="soon" aria-pressed="false">Coming Soon</button>
+<button type="button" class="pub-tabs__btn" data-show="soon" aria-pressed="false">Upcoming</button>
 </div>
 <div class="publications" data-pub-panel="published">
 {% bibliography %}

@@ -640,6 +640,42 @@ html {
   color: var(--global-theme-color);
 }
 
+/* A paper's key figure under its title: framed on white (the figures have white backgrounds,
+   so this keeps them clean in dark mode too), height-capped, click to zoom. */
+.pub-figure {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.85rem 0 0.15rem;
+  padding: 0.6rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  background: #fff;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.pub-figure:hover {
+  border-color: var(--af-accent-border);
+  box-shadow: 0 6px 20px -12px rgba(0, 0, 0, 0.35);
+}
+
+.pub-figure img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 4px;
+  cursor: zoom-in;
+}
+
+@media (max-width: 575.98px) {
+  .pub-figure img {
+    max-height: 220px;
+  }
+}
+
 /* Publications page: the toggle sits above the list */
 .pub-tabs--page {
   margin-bottom: 1.75rem;

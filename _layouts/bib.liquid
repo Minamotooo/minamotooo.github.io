@@ -187,6 +187,10 @@
       {{ entry.note | strip }}
     </div>
 
+    {% if entry.teaser %}
+      {% include pub_figure.liquid file=entry.teaser alt=entry.teaser_alt title=entry.title %}
+    {% endif %}
+
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}
