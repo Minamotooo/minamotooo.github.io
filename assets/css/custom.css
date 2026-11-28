@@ -706,7 +706,9 @@ html {
   line-height: 1.7;
 }
 
-.publications ol.bibliography li .title + .thesis-desc {
+.publications ol.bibliography li .title + .thesis-desc,
+.publications ol.bibliography li .author + .thesis-desc,
+.publications ol.bibliography li .pub-credits + .thesis-desc {
   margin-top: 0.6rem;
 }
 
@@ -909,6 +911,40 @@ html {
   margin-top: 0.2rem;
   color: var(--global-text-color-light);
   font-size: 0.9rem;
+}
+
+/* Author, supervisor and mentor lines (_includes/people_list.liquid) */
+.publications ol.bibliography li .author,
+.publications ol.bibliography li .pub-credits {
+  margin-top: 0.25rem;
+  color: var(--global-text-color);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.publications ol.bibliography li .pub-credits {
+  margin-top: 0.1rem;
+  color: var(--global-text-color-light);
+}
+
+.publications ol.bibliography li .author b {
+  font-weight: 700;
+}
+
+.publications ol.bibliography li .author sup,
+.publications ol.bibliography li .pub-credits sup {
+  margin-left: 1px;
+}
+
+.author-aff {
+  color: var(--global-text-color-light);
+  font-size: 0.85em;
+}
+
+.author-note {
+  margin-left: 0.4rem;
+  color: var(--global-text-color-light);
+  font-size: 0.8em;
 }
 
 .publications ol.bibliography li .links {
