@@ -163,7 +163,8 @@
 
   /* ---------- Publication tabs (About and Publications pages) ----------
      A [data-pub-tabs] block holds .pub-tabs__btn buttons and [data-pub-panel] panels; a button's
-     data-show names the panel it reveals. An optional [data-pub-tabs-title] takes the button's data-title. */
+     data-show names the panel it reveals. An optional [data-pub-tabs-title] takes the button's data-title.
+     The group's data-active names the open panel, so CSS can hide the "* Equal contribution" key on Ongoing. */
   function initPubTabs() {
     document.querySelectorAll("[data-pub-tabs]").forEach(function (group) {
       var buttons = group.querySelectorAll(".pub-tabs__btn");
@@ -171,6 +172,7 @@
       var title = group.querySelector("[data-pub-tabs-title]");
       buttons.forEach(function (btn) {
         btn.addEventListener("click", function () {
+          group.setAttribute("data-active", btn.getAttribute("data-show"));
           buttons.forEach(function (b) {
             var on = b === btn;
             b.classList.toggle("is-active", on);

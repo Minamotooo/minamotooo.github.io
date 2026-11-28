@@ -5,6 +5,7 @@
 #   self:        the site owner; their name is shown in bold
 "Aurchi Chowdhury":
   self: true
+  url: https://scholar.google.com/citations?user=VLcf3FAAAAAJ
 
 "Abrar Zahin Raihan":
   url: https://scholar.google.com/citations?user=ZtBSF7kAAAAJ

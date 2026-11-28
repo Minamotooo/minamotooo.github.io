@@ -2,14 +2,14 @@
 # `label` is the badge text; `title` is optional.
 # `authors`, `supervisors` and `mentors` are names from _data/people.yml.
 - label: Thesis
-  # title: ""
+  title: "Feature Suppression in Joint-Embedding Predictive Architectures"
   authors: ["Aurchi Chowdhury", "Abrar Zahin Raihan", "Ruwad Naswan"]
   supervisors: ["Rifat Shahriyar", "A. B. M. Alim Al Islam"]
   description: >-
     Some self-supervised learning methods, like LeJEPA, stop a model from learning useless, collapsed representations by making its outputs follow a fixed bell-shaped (Gaussian) distribution. I'm studying how this rule affects what the model actually learns. Since the model only has a limited amount of "space" to store information, different features may compete for it. A feature that stays the same across different versions of an image, but doesn't help with the real task, might take up space that a more useful feature needs. This problem, called feature suppression, is well known in contrastive learning. But it's still unknown whether it also happens in joint-embedding predictive architectures (JEPAs), which learn without comparing against negative examples.
 
 - label: Research
-  # title: ""
+  title: "When Does an Added Modality Help Multimodal Molecular Models?"
   authors: ["Aurchi Chowdhury", "Abrar Zahin Raihan"]
   supervisors: ["M. Saifur Rahman"]
   mentors: ["Tanjeem Azwad Zaman", "Md Toki Tahmid"]

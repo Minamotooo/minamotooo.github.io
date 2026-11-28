@@ -1,10 +1,18 @@
 {% comment %}
-  "Supervised by …" and "Mentored by …" lines for an entry with optional
-  `supervisors` and `mentors` name arrays (see people_list.liquid).
+  One line of supervisors and mentors for an entry with optional `supervisors` and `mentors`
+  name arrays (see people_list.liquid), e.g. "Supervisors: A and B · Mentors: C".
 {% endcomment %}
-{%- if include.item.supervisors.size > 0 -%}
-  <div class="pub-credits">Supervised by {% include people_list.liquid names=include.item.supervisors conj="and" %}</div>
-{%- endif -%}
-{%- if include.item.mentors.size > 0 -%}
-  <div class="pub-credits">Mentored by {% include people_list.liquid names=include.item.mentors conj="and" %}</div>
+{%- assign has_sup = false -%}
+{%- if include.item.supervisors.size > 0 %}{% assign has_sup = true %}{% endif -%}
+{%- assign has_men = false -%}
+{%- if include.item.mentors.size > 0 %}{% assign has_men = true %}{% endif -%}
+{%- if has_sup or has_men -%}
+  <div class="pub-credits">
+    {%- if has_sup -%}
+      <span class="pub-credits__group"><span class="pub-credits__label">Supervised by</span> {% include people_list.liquid names=include.item.supervisors conj="and" %}</span>
+    {%- endif -%}
+    {%- if has_men -%}
+      <span class="pub-credits__group"><span class="pub-credits__label">Mentored by</span> {% include people_list.liquid names=include.item.mentors conj="and" %}</span>
+    {%- endif -%}
+  </div>
 {%- endif -%}

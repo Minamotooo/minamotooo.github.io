@@ -70,7 +70,10 @@ layout: default
         {% assign has_ongoing = false %}
         {% if site.data.ongoing.size > 0 %}{% assign has_ongoing = true %}{% endif %}
         <div class="section-head{% if has_review or has_ongoing %} section-head--tabs{% endif %}">
-          <h2 data-pub-tabs-title>Selected Publications</h2>
+          <div class="section-head__title">
+            <h2 data-pub-tabs-title>Selected Publications</h2>
+            <span class="pub-legend"><sup>*</sup>Equal contribution</span>
+          </div>
           {% if has_review or has_ongoing %}
             <div class="pub-tabs" role="group" aria-label="Show publications">
               <button type="button" class="pub-tabs__btn is-active" data-show="published" data-title="Selected Publications" aria-pressed="true">Published</button>

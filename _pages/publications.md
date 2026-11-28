@@ -9,7 +9,10 @@ nav_order: 2
 {% if site.data.under_review.size > 0 %}
 <div data-pub-tabs>
 <div class="section-head section-head--tabs">
+<div class="section-head__title">
 <h2 data-pub-tabs-title>All Publications</h2>
+<span class="pub-legend"><sup>*</sup>Equal contribution</span>
+</div>
 <div class="pub-tabs" role="group" aria-label="Show publications">
 <button type="button" class="pub-tabs__btn is-active" data-show="published" data-title="All Publications" aria-pressed="true">Published</button>
 <button type="button" class="pub-tabs__btn" data-show="review" data-title="Under Review" aria-pressed="false">Under review</button>

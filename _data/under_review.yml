@@ -2,16 +2,14 @@
 # `authors` and `mentors` are names from _data/people.yml; a trailing * marks equal contribution.
 # `figure` (optional) is a file in assets/img/publication_preview/; `figure_alt` describes it.
 - title: "Not All in One View: Bringing Evidence Together for Training-Free Chart and Table Question Answering"
-  authors: ["Abrar Zahin Raihan*", "Aurchi Chowdhury*"]
-  mentors: ["Nazia Tasnim"]
+  authors: ["Abrar Zahin Raihan*", "Aurchi Chowdhury*", "Nazia Tasnim"]
   figure: cr1r-pipeline.jpg
   figure_alt: "CR1R pipeline: importance map, rectify and gate, connected components, rank-1 refinement, then one crop per component passed to a frozen VLM"
   abstract: >-
     Multimodal large language models struggle to read fine-grained evidence in charts and tables under constrained visual-token budgets. Training-free cropping can improve evidence access, but a single window must balance coverage of separated evidence against the detail needed to read it. We propose Component-wise Rank-1 Refinement (CR1R), which separates visually supported grounding responses into connected components and selects complementary crops without updating model parameters. CR1R adjusts the importance scores within each region to favor consistent row and column patterns, while leaving locations with zero scores unchanged. Experiments across ten chart and table benchmarks and four frozen backbones show downstream gains, with up to a 4.86-percentage-point improvement in table macro accuracy over the entropy-gradient grounding baseline, alongside better evidence alignment in all ten evaluated backbone-map pairings. Further results show that these views can complement extracted text and higher global resolution, with benefits extending beyond chart and table QA. Together, these findings establish a practical way to improve access to chart and table evidence and highlight evidence organization as a useful direction for training-free multimodal inference.
 
 - title: "MemPMI: Test-Time Auditing of World-Model Memory"
-  authors: ["Abrar Zahin Raihan*", "Aurchi Chowdhury*"]
-  mentors: ["Nazia Tasnim"]
+  authors: ["Abrar Zahin Raihan*", "Aurchi Chowdhury*", "Nazia Tasnim"]
   figure: mempmi-memory-audit.jpg
   figure_alt: "MemPMI on Minecraft and Loopcraft: an out-of-date memory frame, the model's prediction with it, the MemPMI map locating the change, and the prediction after forgetting it"
   abstract: >-

@@ -930,18 +930,41 @@ html {
   font-size: 0.9rem;
 }
 
-/* Author, supervisor and mentor lines (_includes/people_list.liquid) */
+/* Author, supervisor and mentor lines (_includes/people_list.liquid).
+   Names are plain text that turns accent-coloured on hover, so a line of links stays calm. */
 .publications ol.bibliography li .author,
 .publications ol.bibliography li .pub-credits {
-  margin-top: 0.25rem;
+  margin-top: 0.3rem;
   color: var(--global-text-color);
   font-size: 0.92rem;
   line-height: 1.6;
 }
 
 .publications ol.bibliography li .pub-credits {
-  margin-top: 0.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.4rem;
+  row-gap: 0.1rem;
+  margin-top: 0.15rem;
+  font-size: 0.87rem;
+}
+
+.pub-credits__label {
   color: var(--global-text-color-light);
+}
+
+.publications ol.bibliography li .author a.person,
+.publications ol.bibliography li .pub-credits a.person {
+  color: inherit;
+  border-bottom: 0;
+  text-decoration: none;
+}
+
+.publications ol.bibliography li .author a.person:hover,
+.publications ol.bibliography li .pub-credits a.person:hover {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .publications ol.bibliography li .author b {
@@ -953,15 +976,38 @@ html {
   margin-left: 1px;
 }
 
+/* "* Equal contribution" key beside the publications heading */
+.section-head__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.75rem;
+}
+
+.pub-legend {
+  color: var(--global-text-color-light);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.pub-legend sup {
+  margin-right: 1px;
+}
+
+[data-pub-tabs][data-active="ongoing"] .pub-legend {
+  display: none;
+}
+
+/* Ongoing work: the description reads as body text under the credits */
+.publications ol.bibliography.ongoing li .thesis-desc {
+  color: var(--global-text-color-light);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
 .author-aff {
   color: var(--global-text-color-light);
   font-size: 0.85em;
-}
-
-.author-note {
-  margin-left: 0.4rem;
-  color: var(--global-text-color-light);
-  font-size: 0.8em;
 }
 
 .publications ol.bibliography li .links {
