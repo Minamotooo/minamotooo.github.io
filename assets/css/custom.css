@@ -734,6 +734,26 @@ html {
   font-size: 0.85rem;
 }
 
+.project-card__team {
+  margin: 0.2rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.85rem;
+}
+
+.project-card__team .person {
+  color: var(--global-text-color);
+}
+
+.project-card__team a.person {
+  text-decoration: none;
+}
+
+.project-card__team a.person:hover {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .project-card__summary,
 .project-card__points {
   margin: 0.85rem 0 0;
