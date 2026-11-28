@@ -4,37 +4,28 @@
 #   url:         makes the name a link
 #   self:        the site owner; their name is shown in bold
 "Aurchi Chowdhury":
-  affiliation: BUET
   self: true
 
 "Abrar Zahin Raihan":
-  affiliation: BUET
   url: https://scholar.google.com/citations?user=ZtBSF7kAAAAJ
 
 "Ruwad Naswan":
-  affiliation: BUET
   url: https://scholar.google.com/citations?user=BPSiKaUAAAAJ
 
 "Nazia Tasnim":
-  affiliation: BU
   url: https://scholar.google.com/citations?user=_9JYPbsAAAAJ
 
 "Rifat Shahriyar":
-  affiliation: BUET
   url: https://scholar.google.com/citations?user=p-w4hOUAAAAJ
 
 "A. B. M. Alim Al Islam":
-  affiliation: BUET
   url: https://scholar.google.com/citations?user=K-AIPzQAAAAJ
 
 "M. Saifur Rahman":
-  affiliation: BUET
   url: https://scholar.google.com/citations?user=9d52x-cAAAAJ
 
 "Tanjeem Azwad Zaman":
-  affiliation: CMU
   url: https://scholar.google.com/citations?user=hP88rYAAAAAJ
 
 "Md Toki Tahmid":
-  affiliation: Princeton
   url: https://scholar.google.com/citations?user=Oc81Bm8AAAAJ
