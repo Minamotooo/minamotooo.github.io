@@ -6,6 +6,7 @@ importance: 2
 category: work
 selected: true
 year: 2026
+team: ["Sakif Naieb Raiyan", "Sayaad Muzahid Masfi"]
 tech: [PyTorch, ConvNeXt, U-Net, PatchGAN, VGG]
 github: https://github.com/Minamotooo/MemoryLane
 bullets:

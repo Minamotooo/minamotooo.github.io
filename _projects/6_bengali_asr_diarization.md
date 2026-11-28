@@ -6,6 +6,7 @@ importance: 1
 category: work
 selected: true
 year: 2026
+team: ["Rubaiyat-E-Zaman", "Sk. Ashrafuzzaman Nafees"]
 tech: [PyTorch, Whisper, Pyannote, Silero VAD, whisper-timestamped]
 github: https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0
 paper: https://arxiv.org/abs/2603.04809
