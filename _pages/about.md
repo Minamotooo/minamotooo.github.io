@@ -24,7 +24,7 @@ latest_posts:
   limit: 3
 ---
 
-I am a senior-year [Computer Science & Engineering](https://cse.buet.ac.bd/) student at the [Bangladesh University of Engineering and Technology (BUET)](https://www.buet.ac.bd/). My research interests span **Representation Learning**, **Multimodal AI**, **Computer Vision**, and **Mechanistic Interpretability**.
+I am a senior-year [Computer Science & Engineering](https://cse.buet.ac.bd/) student at the [Bangladesh University of Engineering and Technology (BUET)](https://www.buet.ac.bd/). My research interests span **Representation Learning**, **Multimodal AI**, **Computer Vision**, **Mechanistic Interpretability**, and **World Models**.
 
 I want to understand how AI models work underneath: what they learn, where that knowledge lives, and why they break. I study this by looking inside them, probing and intervening on their representations, especially in multimodal models. I'm also drawn to world models, whose reliability depends on the quality of the representations they learn, and to self-supervised learning, which is often how these representations are learned. I use what I find to develop methods that make models more robust.
 

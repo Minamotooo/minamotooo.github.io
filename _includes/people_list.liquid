@@ -1,13 +1,21 @@
 {% comment %}
   Inline list of people, e.g. "A, B and C".
   names: array of names; a trailing * marks equal contribution and is shown as a superscript.
+         A trailing ^N (e.g. "Name^1") is shown as a numbered superscript instead.
   conj:  optional word placed before the last name, e.g. "and" ("A and B", "A, B and C").
   Affiliation, link and bolding come from _data/people.yml.
 {% endcomment %}
 {%- for raw in include.names -%}
-  {%- assign name = raw | remove: '*' | strip -%}
+  {%- assign parts = raw | split: '^' -%}
+  {%- assign name = parts[0] | remove: '*' | strip -%}
+  {%- assign mark = '' -%}
+  {%- if parts.size > 1 -%}
+    {%- assign mark = parts[1] | strip -%}
+  {%- elsif raw contains '*' -%}
+    {%- assign mark = '*' -%}
+  {%- endif -%}
   {%- assign person = site.data.people[name] -%}
-  {%- capture label -%}{{ name }}{% if raw contains '*' %}<sup>*</sup>{% endif %}{%- endcapture -%}
+  {%- capture label -%}{{ name }}{% if mark != '' %}<sup>{{ mark }}</sup>{% endif %}{%- endcapture -%}
   {%- if person.self -%}
     {%- capture label -%}<b>{{ label }}</b>{%- endcapture -%}
   {%- endif -%}

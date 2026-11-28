@@ -7,11 +7,3 @@
   supervisors: ["Rifat Shahriyar", "A. B. M. Alim Al Islam"]
   description: >-
     Some self-supervised learning methods, like LeJEPA, stop a model from learning useless, collapsed representations by making its outputs follow a fixed bell-shaped (Gaussian) distribution. I'm studying how this rule affects what the model actually learns. Since the model only has a limited amount of "space" to store information, different features may compete for it. A feature that stays the same across different versions of an image, but doesn't help with the real task, might take up space that a more useful feature needs. This problem, called feature suppression, is well known in contrastive learning. But it's still unknown whether it also happens in joint-embedding predictive architectures (JEPAs), which learn without comparing against negative examples.
-
-- label: Research
-  title: "When Does an Added Modality Help Multimodal Molecular Models?"
-  authors: ["Aurchi Chowdhury", "Abrar Zahin Raihan"]
-  supervisors: ["M. Saifur Rahman"]
-  mentors: ["Tanjeem Azwad Zaman", "Md Toki Tahmid"]
-  description: >-
-    Multimodal molecular models assume that combining views of a molecule, like its text string and graph structure, adds complementary information. I'm investigating whether this is actually true. So far, the views seem to overlap heavily: a chemical language model already captures most of what a graph encoder knows. I'm now studying what makes an added modality genuinely useful.
