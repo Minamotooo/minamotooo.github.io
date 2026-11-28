@@ -1,19 +1,21 @@
 {% comment %}
-  Upcoming papers from _data/coming_soon.yml (title + abstract only).
-  Used by the "Upcoming" tab on the About and Publications pages.
+  Papers under review, from _data/under_review.yml (title, authors, mentors and abstract).
+  Used by the "Under review" tab on the About and Publications pages.
 {% endcomment %}
 <ol class="bibliography">
-  {% for paper in site.data.coming_soon %}
+  {% for paper in site.data.under_review %}
     <li>
       <div class="row">
         <div class="col col-sm-2 abbr">
-          <abbr class="badge rounded">Soon</abbr>
+          <abbr class="badge rounded">Review</abbr>
         </div>
         <div class="col-sm-10{% if paper.figure %} has-figure{% endif %}">
           {% if paper.figure %}
             {% include pub_figure.liquid file=paper.figure alt=paper.figure_alt title=paper.title %}
           {% endif %}
           <div class="title">{{ paper.title }}</div>
+          {% include author_line.liquid names=paper.authors %}
+          {% include pub_credits.liquid item=paper %}
           <div class="links">
             <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
           </div>

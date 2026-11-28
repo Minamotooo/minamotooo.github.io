@@ -65,53 +65,37 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <section class="home-section" data-pub-tabs>
-        {% assign coming_soon = site.data.coming_soon %}
-        {% assign thesis = site.data.thesis %}
-        {% assign has_soon = false %}
-        {% if coming_soon.size > 0 %}{% assign has_soon = true %}{% endif %}
-        {% assign has_thesis = false %}
-        {% if thesis.description %}{% assign has_thesis = true %}{% endif %}
-        <div class="section-head{% if has_soon or has_thesis %} section-head--tabs{% endif %}">
+        {% assign has_review = false %}
+        {% if site.data.under_review.size > 0 %}{% assign has_review = true %}{% endif %}
+        {% assign has_ongoing = false %}
+        {% if site.data.ongoing.size > 0 %}{% assign has_ongoing = true %}{% endif %}
+        <div class="section-head{% if has_review or has_ongoing %} section-head--tabs{% endif %}">
           <h2 data-pub-tabs-title>Selected Publications</h2>
-          {% if has_soon or has_thesis %}
+          {% if has_review or has_ongoing %}
             <div class="pub-tabs" role="group" aria-label="Show publications">
-              <button type="button" class="pub-tabs__btn is-active" data-show="selected" data-title="Selected Publications" aria-pressed="true">Selected</button>
-              {% if has_soon %}
-                <button type="button" class="pub-tabs__btn" data-show="soon" data-title="Upcoming Publications" aria-pressed="false">Upcoming</button>
+              <button type="button" class="pub-tabs__btn is-active" data-show="published" data-title="Selected Publications" aria-pressed="true">Published</button>
+              {% if has_review %}
+                <button type="button" class="pub-tabs__btn" data-show="review" data-title="Under Review" aria-pressed="false">Under review</button>
               {% endif %}
-              {% if has_thesis %}
-                <button type="button" class="pub-tabs__btn" data-show="thesis" data-title="Thesis" aria-pressed="false">Thesis</button>
+              {% if has_ongoing %}
+                <button type="button" class="pub-tabs__btn" data-show="ongoing" data-title="Ongoing Work" aria-pressed="false">Ongoing</button>
               {% endif %}
             </div>
           {% else %}
             <a class="section-more" href="{{ '/publications/' | relative_url }}">All publications →</a>
           {% endif %}
         </div>
-        <div data-pub-panel="selected">
+        <div data-pub-panel="published">
           {% include selected_papers.liquid %}
         </div>
-        {% if has_soon %}
-          <div class="publications" data-pub-panel="soon" hidden>
-            {% include coming_soon_papers.liquid %}
+        {% if has_review %}
+          <div class="publications" data-pub-panel="review" hidden>
+            {% include under_review_papers.liquid %}
           </div>
         {% endif %}
-        {% if has_thesis %}
-          <div class="publications" data-pub-panel="thesis" hidden>
-            <ol class="bibliography">
-              <li>
-                <div class="row">
-                  <div class="col col-sm-2 abbr">
-                    <abbr class="badge rounded">{{ thesis.status | default: 'Ongoing' }}</abbr>
-                  </div>
-                  <div class="col-sm-10">
-                    {% if thesis.title %}
-                      <div class="title">{{ thesis.title }}</div>
-                    {% endif %}
-                    <p class="thesis-desc">{{ thesis.description }}</p>
-                  </div>
-                </div>
-              </li>
-            </ol>
+        {% if has_ongoing %}
+          <div class="publications" data-pub-panel="ongoing" hidden>
+            {% include ongoing_work.liquid %}
           </div>
         {% endif %}
       </section>

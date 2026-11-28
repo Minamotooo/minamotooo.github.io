@@ -1,0 +1,22 @@
+{% comment %}
+  Inline list of people, e.g. "A (BUET), B (BU)".
+  names: array of names; a trailing * marks equal contribution and is shown as a superscript.
+  conj:  optional word placed before the last name, e.g. "and" ("A and B", "A, B and C").
+  Affiliation, link and bolding come from _data/people.yml.
+{% endcomment %}
+{%- for raw in include.names -%}
+  {%- assign name = raw | remove: '*' | strip -%}
+  {%- assign person = site.data.people[name] -%}
+  {%- capture label -%}{{ name }}{% if raw contains '*' %}<sup>*</sup>{% endif %}{%- endcapture -%}
+  {%- if person.self -%}
+    <b>{{ label }}</b>
+  {%- elsif person.url -%}
+    <a href="{{ person.url }}" target="_blank" rel="noopener">{{ label }}</a>
+  {%- else -%}
+    {{ label }}
+  {%- endif -%}
+  {%- if person.affiliation %} <span class="author-aff">({{ person.affiliation }})</span>{% endif -%}
+  {%- unless forloop.last -%}
+    {%- if include.conj and forloop.rindex == 2 %} {{ include.conj }} {% else %}, {% endif -%}
+  {%- endunless -%}
+{%- endfor -%}

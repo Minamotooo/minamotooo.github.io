@@ -1,0 +1,18 @@
+# Shown under the "Ongoing" tab of the About page's publications section.
+# `label` is the badge text; `title` is optional.
+# `authors`, `supervisors` and `mentors` are names from _data/people.yml.
+- label: Thesis
+  # title: ""
+  authors: ["Aurchi Chowdhury"]
+  # TODO add teammates (Scholar ZtBSF7kAAAAJ, BPSiKaUAAAAJ) and
+  # supervisors (Scholar p-w4hOUAAAAJ, K-AIPzQAAAAJ) once their names are in people.yml.
+  description: >-
+    Some self-supervised learning methods, like LeJEPA, stop a model from learning useless, collapsed representations by making its outputs follow a fixed bell-shaped (Gaussian) distribution. I'm studying how this rule affects what the model actually learns. Since the model only has a limited amount of "space" to store information, different features may compete for it. A feature that stays the same across different versions of an image, but doesn't help with the real task, might take up space that a more useful feature needs. This problem, called feature suppression, is well known in contrastive learning. But it's still unknown whether it also happens in joint-embedding predictive architectures (JEPAs), which learn without comparing against negative examples.
+
+- label: Research
+  # title: ""
+  authors: ["Aurchi Chowdhury"]
+  # TODO add teammate (Scholar ZtBSF7kAAAAJ), supervisor (Scholar 9d52x-cAAAAJ) and
+  # mentors (Scholar hP88rYAAAAAJ, Oc81Bm8AAAAJ) once their names are in people.yml.
+  description: >-
+    Multimodal molecular models assume that combining views of a molecule, like its text string and graph structure, adds complementary information. I'm investigating whether this is actually true. So far, the views seem to overlap heavily: a chemical language model already captures most of what a graph encoder knows. I'm now studying what makes an added modality genuinely useful.

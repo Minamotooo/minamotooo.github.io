@@ -1,0 +1,10 @@
+{% comment %}
+  "Supervised by …" and "Mentored by …" lines for an entry with optional
+  `supervisors` and `mentors` name arrays (see people_list.liquid).
+{% endcomment %}
+{%- if include.item.supervisors.size > 0 -%}
+  <div class="pub-credits">Supervised by {% include people_list.liquid names=include.item.supervisors conj="and" %}</div>
+{%- endif -%}
+{%- if include.item.mentors.size > 0 -%}
+  <div class="pub-credits">Mentored by {% include people_list.liquid names=include.item.mentors conj="and" %}</div>
+{%- endif -%}

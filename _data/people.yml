@@ -1,0 +1,15 @@
+# People named in author, supervisor and mentor lines, keyed by the name exactly as it is written
+# in papers.bib, under_review.yml and ongoing.yml (without the * equal-contribution mark).
+#   affiliation: shown in parentheses after the name
+#   url:         makes the name a link
+#   self:        the site owner; their name is shown in bold
+"Aurchi Chowdhury":
+  affiliation: BUET
+  self: true
+
+"Abrar Zahin Raihan":
+  affiliation: BUET
+
+"Nazia Tasnim":
+  affiliation: BU
+  url: https://scholar.google.com/citations?user=_9JYPbsAAAAJ

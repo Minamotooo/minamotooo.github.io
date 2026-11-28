@@ -1,0 +1,22 @@
+{% comment %}
+  Ongoing work from _data/ongoing.yml. Used by the "Ongoing" tab on the About page.
+{% endcomment %}
+<ol class="bibliography">
+  {% for work in site.data.ongoing %}
+    <li>
+      <div class="row">
+        <div class="col col-sm-2 abbr">
+          <abbr class="badge rounded">{{ work.label | default: 'Ongoing' }}</abbr>
+        </div>
+        <div class="col-sm-10">
+          {% if work.title %}
+            <div class="title">{{ work.title }}</div>
+          {% endif %}
+          {% include author_line.liquid names=work.authors %}
+          {% include pub_credits.liquid item=work %}
+          <p class="thesis-desc">{{ work.description }}</p>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ol>

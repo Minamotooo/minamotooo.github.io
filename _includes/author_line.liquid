@@ -1,0 +1,11 @@
+{% comment %}
+  Author line for a publication entry. names: array of names (see people_list.liquid).
+  Adds an "Equal contribution" note when any name carries a *.
+{% endcomment %}
+{%- if include.names.size > 0 -%}
+  {%- assign names_joined = include.names | join: '|' -%}
+  <div class="author">
+    {%- include people_list.liquid names=include.names -%}
+    {%- if names_joined contains '*' %} <span class="author-note"><sup>*</sup>Equal contribution</span>{% endif -%}
+  </div>
+{%- endif -%}
