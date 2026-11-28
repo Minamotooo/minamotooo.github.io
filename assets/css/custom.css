@@ -936,11 +936,6 @@ html {
   margin-left: 1px;
 }
 
-.author-aff {
-  color: var(--global-text-color-light);
-  font-size: 0.85em;
-}
-
 .author-note {
   margin-left: 0.4rem;
   color: var(--global-text-color-light);
