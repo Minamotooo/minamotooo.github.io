@@ -2,7 +2,7 @@
   One project card, shared by the Projects page and the About page's "Selected Projects".
   Usage: {% include project_card.liquid project=project %}
   Reads title, description, team, bullets, github, demo, paper and tech from the project's front matter.
-  team: teammates' names, shown as "With A and B"; links come from _data/people.yml.
+  team: teammates' names, shown as "Teammates: A and B"; links come from _data/people.yml.
 {% endcomment %}
 {% assign p = include.project %}
 <article class="af-card project-card">
@@ -12,7 +12,7 @@
       <p class="project-card__kicker">{{ p.description }}</p>
     {% endif %}
     {% if p.team and p.team.size > 0 %}
-      <p class="project-card__team">With {% include people_list.liquid names=p.team conj="and" %}</p>
+      <p class="project-card__team">Teammates: {% include people_list.liquid names=p.team conj="and" %}</p>
     {% endif %}
   </header>
 
