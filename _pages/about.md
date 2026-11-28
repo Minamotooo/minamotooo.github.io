@@ -26,8 +26,8 @@ latest_posts:
 
 I am a senior-year [Computer Science & Engineering](https://cse.buet.ac.bd/) student at the [Bangladesh University of Engineering and Technology (BUET)](https://www.buet.ac.bd/). My research interests span **Representation Learning**, **Natural Language Processing**, **Multimodal AI**, **Computer Vision**, and **Mechanistic Interpretability**.
 
-I am broadly interested in how models build, organize, and use internal representations to reason: how language models encode and process linguistic structure, how visual encoders crystallize spatial and semantic information, and when a problem calls for it, how these representations come together across modalities.
+I want to understand how AI models work underneath: what they learn, where that knowledge lives, and why they break. I study this by looking inside them, probing and intervening on their representations, especially in multimodal models. I'm also drawn to world models, whose reliability depends on the quality of the representations they learn, and to self-supervised learning, which is often how these representations are learned. I use what I find to develop methods that make models more robust.
 
-To study these questions, I go deep into model architectures and representations to understand where and how knowledge is encoded, to make reasoning more robust where it breaks down, and to extend these capabilities to settings (languages, modalities, tasks) where they remain underexplored.
+For my undergraduate thesis, I am investigating how self-supervised models divide their limited capacity between features that are stable across views and features that are genuinely useful, and whether this competition leads to feature suppression, where useful features get pushed out.
 
 <p class="availability">I am open to PhD opportunities for Fall 2027. 🎓</p>
