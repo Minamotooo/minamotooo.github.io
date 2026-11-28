@@ -15,3 +15,6 @@ node_modules/
 output/playwright/
 test-results/
 vendor
+
+# PhD-application CV: kept local only, never pushed
+phd_cv/

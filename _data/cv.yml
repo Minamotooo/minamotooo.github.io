@@ -1,7 +1,7 @@
 cv:
   name: Aurchi Chowdhury
   label: "Undergraduate Student <em>(Computer Science and Engineering)</em>"
-  email: 2105083@ugrad.cse.buet.ac.bd
+  email: aurchichowdhury07@gmail.com
   location: Dhaka, Bangladesh
 
   social_networks:
@@ -9,11 +9,13 @@ cv:
       username: Minamotooo
     - network: LinkedIn
       username: aurchichowdhury
+    - network: Google Scholar
+      username: VLcf3FAAAAAJ
 
   sections:
     Interests:
       - name: Research Interests
-        keywords: "Representation Learning · Natural Language Processing · Multimodal AI · Computer Vision · Mechanistic Interpretability"
+        keywords: "Representation Learning · Computer Vision · Natural Language Processing · Mechanistic Interpretability · Multimodal AI · World Models"
 
     Education:
       - institution: Bangladesh University of Engineering and Technology
@@ -21,9 +23,10 @@ cv:
         area: Computer Science and Engineering
         studyType: Bachelor of Engineering
         start_date: 2022-11
-        end_date: present
+        end_date: "2027 (Expected)"
         score: "CGPA: 3.88/4.00"
-        highlights: []
+        highlights:
+          - "CGPA: 3.88/4.00 · Expected graduation: Jun 2027"
 
       - institution: Viqarunnisa Noon School and College
         location: Dhaka, Bangladesh
@@ -38,19 +41,49 @@ cv:
     Publications:
       - title: "Causal Localization of the English Pivot in LLaVA: Mechanistic VLM Analysis and Training-Free Multilingual Steering"
         authors:
-          - Aurchi Chowdhury
-        publisher: "1st Workshop on Multilinguality in the Era of Large Language Models (MeLLM), ACL 2026 | Archival"
+          - Abrar Zahin Raihan*
+          - Aurchi Chowdhury*
+        publisher: "<a href='https://mellm.org/' target='_blank'>1st Workshop on Multilinguality in the Era of Large Language Models (MeLLM), ACL 2026</a> | Archival"
         releaseDate: 2026-07
         url: https://github.com/azraihan/mul-vlm-mech-interp
-        summary: "San Diego, CA"
+        summary: "Abrar Zahin Raihan<sup>*</sup> and <strong>Aurchi Chowdhury<sup>*</sup></strong><br>San Diego, CA · <a href='https://aclanthology.org/2026.mellm-1.25/' target='_blank'>Paper</a> | <a href='https://github.com/azraihan/mul-vlm-mech-interp' target='_blank'>Code</a><br><small><em><sup>*</sup>Equal contribution</em></small>"
 
       - title: "Where Do Affordances Crystallize? Video vs. Image Self-Supervised Encoders for Embodied Perception"
         authors:
-          - Aurchi Chowdhury
-        publisher: "7th Annual Embodied AI (EAI) Workshop, CVPR 2026 | Non-archival Poster"
+          - Abrar Zahin Raihan*
+          - Aurchi Chowdhury*
+        publisher: "<a href='https://embodied-ai.org/cvpr2026/' target='_blank'>7th Annual Embodied AI (EAI) Workshop, CVPR 2026</a> | Non-archival Poster"
         releaseDate: 2026-06
         url: https://github.com/azraihan/affordance_crystallization
-        summary: "Denver, CO · [PDF](https://embodied-ai.org/papers/2026/32_Where_Do_Affordances_Crysta.pdf)"
+        summary: "Abrar Zahin Raihan<sup>*</sup> and <strong>Aurchi Chowdhury<sup>*</sup></strong><br>Denver, CO · <a href='https://embodied-ai.org/papers/2026/32_Where_Do_Affordances_Crysta.pdf' target='_blank'>Paper</a> | <a href='https://github.com/azraihan/affordance_crystallization' target='_blank'>Code</a><br><small><em><sup>*</sup>Equal contribution</em></small>"
+
+    Under Review:
+      - title: "Not All in One View: Bringing Evidence Together for Training-Free Chart and Table Question Answering"
+        summary: "Abrar Zahin Raihan<sup>*</sup>, <strong>Aurchi Chowdhury<sup>*</sup></strong> and Nazia Tasnim<br><small><em><sup>*</sup>Equal contribution</em></small>"
+
+      - title: "MemPMI: Test-Time Auditing of World-Model Memory"
+        summary: "Abrar Zahin Raihan<sup>*</sup>, <strong>Aurchi Chowdhury<sup>*</sup></strong> and Nazia Tasnim<br><small><em><sup>*</sup>Equal contribution</em></small>"
+
+      - title: "When Does an Added Modality Help Multimodal Molecular Models?"
+        summary: "Abrar Zahin Raihan<sup>1</sup>, <strong>Aurchi Chowdhury<sup>1</sup></strong>, Md Toki Tahmid<sup>2</sup>, Tanjeem Azwad Zaman<sup>2</sup>, Era Sanjida Islam<sup>3</sup> and M. Saifur Rahman"
+
+    Research Collaborations:
+      - position: National University of Singapore (Ongoing)
+        company: Remote collaboration
+        start_date: 2026-07
+        end_date: present
+        highlights:
+          - How self-supervised models allocate capacity between stable and useful features, and why this causes feature suppression in JEPAs.
+          - "<em>Collaborators:</em> Jing Yu Lim (PhD student, Prof. Dianbo Liu's Lab) and Rushi Shah (PhD student)."
+          - "<em>Supervisors:</em> <a href='https://scholar.google.com/citations?user=p-w4hOUAAAAJ' target='_blank'>Prof. Rifat Shahriyar</a> and <a href='https://scholar.google.com/citations?user=K-AIPzQAAAAJ' target='_blank'>Prof. A. B. M. Alim Al Islam</a>, Department of CSE, BUET."
+
+      - position: Boston University
+        company: Remote collaboration
+        start_date: 2026-06
+        end_date: present
+        highlights:
+          - "Test-time auditing of world-model memory; training-free methods for fine-grained multimodal understanding."
+          - "<em>Collaborator:</em> <a href='https://scholar.google.com/citations?user=_9JYPbsAAAAJ' target='_blank'>Nazia Tasnim</a>, PhD candidate, Department of Computer Science, BU."
 
     Experience:
       - company: "<a href='https://atlas-indol-one.vercel.app/' target='_blank'>ATLAS: Adaptive Tutoring &amp; Learning Assessment System</a>, Dept. of CSE, BUET"
@@ -60,7 +93,7 @@ cv:
         end_date: 2026-09
         highlights:
           - Developed an adaptive tutoring platform using Bayesian Knowledge Tracing (BKT), which builds learning pathways aligned with the Higher Secondary Certificate (HSC) exam syllabus.
-          - "Supervisor: <a href='https://cse.buet.ac.bd/faculty/faculty_detail/sharif' target='_blank'>Md. Shariful Islam Bhuiyan</a>"
+          - "Supervisor: <a href='https://cse.buet.ac.bd/faculty/faculty_detail/sharif' target='_blank'>Md. Shariful Islam Bhuyan</a>"
           - "Code: <a href='https://github.com/Minamotooo/ATLAS' target='_blank'>github.com/Minamotooo/ATLAS</a>"
 
     Projects:
@@ -72,6 +105,7 @@ cv:
           - Fine-tuned a Whisper-medium Bengali ASR model on the resulting chunks for low-resource Natural Language Processing.
           - Domain-adapted Pyannote for Bengali speaker diarization by fine-tuning only its segmentation head on Bengali conversational audio, without disturbing the language-agnostic embedding space.
           - Introduced a Dual-VAD intersection (Pyannote ∩ Silero VAD) retaining only segments confirmed by an independent speech boundary detector.
+          - "<a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0' target='_blank'><i class='fa-brands fa-github'></i> Code</a> | <a href='https://arxiv.org/abs/2603.04809' target='_blank'><i class='fa-solid fa-file-pdf'></i> Paper</a> | <a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0/blob/main/Presentation.pdf' target='_blank'><i class='fa-solid fa-file-powerpoint'></i> Slides</a>"
         start_date: 2026-03
 
       - name: MemoryLane
@@ -81,6 +115,7 @@ cv:
           - Approached grayscale image colorization as a Computer Vision problem of conditional image generation in CIELab color space.
           - Built a ConvNeXt-Base encoder–U-Net decoder with a PatchGAN discriminator.
           - Reduced the dull, grayish outputs common in colorization models by training on colorfulness-filtered data with a combined perceptual + adversarial loss (VGG + PatchGAN).
+          - "<a href='https://github.com/Minamotooo/MemoryLane' target='_blank'><i class='fa-brands fa-github'></i> Code</a> | <a href='https://github.com/Minamotooo/MemoryLane/blob/main/MemoryLane.pdf' target='_blank'><i class='fa-solid fa-file-powerpoint'></i> Slides</a>"
         start_date: 2026-04
 
       - name: Scramble
@@ -98,18 +133,23 @@ cv:
           - Built a full-stack travel planning platform covering accommodations, dining, attractions, and tour guides.
         start_date: 2024-03
 
-    Awards:
+    Academic Award:
+      - title: "University Merit Scholarships, BUET"
+        awarder: "2022-23, 2023-24"
+        summary: "Awarded twice for outstanding academic results."
+
+    Achievements:
+      - title: "1st Runner Up, ResearchSpark 3 Minute Thesis Competition"
+        date: 2026-04
+        awarder: BUET
+        url: https://www.facebook.com/events/1499256075247393/
+        summary: "Delivered a research pitch on efficient deep learning for hate speech detection in low-resource Bangla."
+
       - title: "11th / 124, DL Sprint 4.0: Bengali Long-Form ASR & Diarization"
         date: 2026-03
         awarder: BUET CSE Fest 2026
         url: https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0
         summary: "Tackled <strong>low-resource Natural Language Processing</strong> for Bengali across two Kaggle tracks: built <strong>WhisperAlign</strong> using Whisper's <strong>cross-attention alignment heads</strong> for Bengali ASR (7th / 124); domain-adapted <strong>Pyannote</strong> with <strong>Dual-VAD intersection</strong> for speaker diarization (4th / 124)."
-
-      - title: "1st Runner Up, ResearchSpark 3 Minute Thesis Competition"
-        date: 2026-04
-        awarder: BUET
-        url: https://www.facebook.com/events/1499256075247393/
-        summary: "Built <strong>BanglaHateCorpus</strong> (168K Bangla hate speech instances from 8 platforms, verified via human-linguist review and <strong>LLM-as-judge</strong> scoring) and <strong>BanHateFormer</strong>, a <strong>Mixture-of-Experts</strong> Transformer achieving 91.33% F1 at 94× smaller scale than BanglaBERT for deployable <strong>NLP-based content moderation</strong>."
 
       - title: "1st Runner Up, HULT Prize at BUET"
         date: 2026-02
@@ -122,3 +162,27 @@ cv:
         awarder: BUET CSE Fest 2024
         url: https://minamotooo.github.io/assets/pdf/Rumor_Verification_Poster.pdf
         summary: "Designed a real-time <strong>multimodal threat detection</strong> system combining <strong>NLP-based rumor classification</strong>, <strong>CNN+RNN</strong> video analysis, and a confidence-scoring fusion module across 16 threat classes, intersecting <strong>Computer Vision</strong>, <strong>Natural Language Processing</strong>, and <strong>Multimodal AI</strong>."
+
+    Technical Skills:
+      - name: Languages
+        keywords: ["Python", "C", "C++", "Java", "JavaScript", "Bash", "SQL"]
+      - name: Deep Learning
+        keywords: ["PyTorch", "TensorFlow", "Keras"]
+      - name: Libraries
+        keywords: ["NumPy", "Pandas", "SciPy", "Matplotlib", "Seaborn", "Scikit-Learn and other ML libraries"]
+      - name: Web & Databases
+        keywords: ["React", "Next.js", "Express", "PostgreSQL", "MongoDB"]
+      - name: Tools
+        keywords: ["Git", "LaTeX"]
+
+    References:
+      - name: Dr. Rifat Shahriyar
+        reference: "Professor<br>Dept. of Computer Science and Engineering, Bangladesh University of Engineering and Technology<br><a href='mailto:rifat@cse.buet.ac.bd'>rifat@cse.buet.ac.bd</a> · <a href='https://scholar.google.com/citations?user=p-w4hOUAAAAJ' target='_blank'>Google Scholar</a>"
+      - name: Dr. Mohammad Saifur Rahman
+        reference: "Professor<br>Dept. of Computer Science and Engineering, Bangladesh University of Engineering and Technology<br><a href='mailto:mrahman@cse.buet.ac.bd'>mrahman@cse.buet.ac.bd</a> · <a href='https://scholar.google.com/citations?user=9d52x-cAAAAJ' target='_blank'>Google Scholar</a>"
+      - name: Dr. A. B. M. Alim Al Islam
+        reference: "Professor<br>Dept. of Computer Science and Engineering, Bangladesh University of Engineering and Technology<br><a href='mailto:alim_razi@cse.buet.ac.bd'>alim_razi@cse.buet.ac.bd</a> · <a href='https://scholar.google.com/citations?user=K-AIPzQAAAAJ' target='_blank'>Google Scholar</a>"
+      - name: Dr. Md. Shariful Islam Bhuyan
+        reference: "Associate Professor<br>Dept. of Computer Science and Engineering, Bangladesh University of Engineering and Technology<br><a href='mailto:sharifulislam@cse.buet.ac.bd'>sharifulislam@cse.buet.ac.bd</a> · <a href='https://scholar.google.com/citations?user=tXAX-IUAAAAJ' target='_blank'>Google Scholar</a>"
+      - name: Nazia Tasnim
+        reference: "PhD Candidate<br>Dept. of Computer Science, Boston University<br><a href='mailto:nimzia@bu.edu'>nimzia@bu.edu</a> · <a href='https://scholar.google.com/citations?user=_9JYPbsAAAAJ' target='_blank'>Google Scholar</a>"
