@@ -15,7 +15,7 @@ cv:
   sections:
     Interests:
       - name: Research Interests
-        keywords: "Representation Learning · Computer Vision · Natural Language Processing · Mechanistic Interpretability · Multimodal AI · World Models"
+        keywords: "Representation Learning · Computer Vision · Mechanistic Interpretability · Multimodal AI · World Models"
 
     Education:
       - institution: Bangladesh University of Engineering and Technology
@@ -46,7 +46,7 @@ cv:
         publisher: "<a href='https://mellm.org/' target='_blank'>1st Workshop on Multilinguality in the Era of Large Language Models (MeLLM), ACL 2026</a> | Archival"
         releaseDate: 2026-07
         url: https://github.com/azraihan/mul-vlm-mech-interp
-        summary: "Abrar Zahin Raihan<sup>*</sup> and <strong>Aurchi Chowdhury<sup>*</sup></strong><br>San Diego, CA · <a href='https://aclanthology.org/2026.mellm-1.25/' target='_blank'>Paper</a> | <a href='https://github.com/azraihan/mul-vlm-mech-interp' target='_blank'>Code</a><br><small><em><sup>*</sup>Equal contribution</em></small>"
+        summary: "Abrar Zahin Raihan<sup>*</sup> and <strong>Aurchi Chowdhury<sup>*</sup></strong><br>San Diego, CA<br><a href='https://aclanthology.org/2026.mellm-1.25/' target='_blank'><i class='fa-solid fa-file-pdf'></i> Paper</a> &#124; <a href='https://github.com/azraihan/mul-vlm-mech-interp' target='_blank'><i class='fa-brands fa-github'></i> Code</a><br><small><em><sup>*</sup>Equal contribution</em></small>"
 
       - title: "Where Do Affordances Crystallize? Video vs. Image Self-Supervised Encoders for Embodied Perception"
         authors:
@@ -55,7 +55,7 @@ cv:
         publisher: "<a href='https://embodied-ai.org/cvpr2026/' target='_blank'>7th Annual Embodied AI (EAI) Workshop, CVPR 2026</a> | Non-archival Poster"
         releaseDate: 2026-06
         url: https://github.com/azraihan/affordance_crystallization
-        summary: "Abrar Zahin Raihan<sup>*</sup> and <strong>Aurchi Chowdhury<sup>*</sup></strong><br>Denver, CO · <a href='https://embodied-ai.org/papers/2026/32_Where_Do_Affordances_Crysta.pdf' target='_blank'>Paper</a> | <a href='https://github.com/azraihan/affordance_crystallization' target='_blank'>Code</a><br><small><em><sup>*</sup>Equal contribution</em></small>"
+        summary: "Abrar Zahin Raihan<sup>*</sup> and <strong>Aurchi Chowdhury<sup>*</sup></strong><br>Denver, CO<br><a href='https://embodied-ai.org/papers/2026/32_Where_Do_Affordances_Crysta.pdf' target='_blank'><i class='fa-solid fa-file-pdf'></i> Paper</a> &#124; <a href='https://github.com/azraihan/affordance_crystallization' target='_blank'><i class='fa-brands fa-github'></i> Code</a><br><small><em><sup>*</sup>Equal contribution</em></small>"
 
     Under Review:
       - title: "Not All in One View: Bringing Evidence Together for Training-Free Chart and Table Question Answering"
@@ -105,7 +105,7 @@ cv:
           - Fine-tuned a Whisper-medium Bengali ASR model on the resulting chunks for low-resource Natural Language Processing.
           - Domain-adapted Pyannote for Bengali speaker diarization by fine-tuning only its segmentation head on Bengali conversational audio, without disturbing the language-agnostic embedding space.
           - Introduced a Dual-VAD intersection (Pyannote ∩ Silero VAD) retaining only segments confirmed by an independent speech boundary detector.
-          - "<a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0' target='_blank'><i class='fa-brands fa-github'></i> Code</a> | <a href='https://arxiv.org/abs/2603.04809' target='_blank'><i class='fa-solid fa-file-pdf'></i> Paper</a> | <a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0/blob/main/Presentation.pdf' target='_blank'><i class='fa-solid fa-file-powerpoint'></i> Slides</a>"
+          - "<a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0' target='_blank'><i class='fa-brands fa-github'></i> Code</a> &#124; <a href='https://arxiv.org/abs/2603.04809' target='_blank'><i class='fa-solid fa-file-pdf'></i> Paper</a> &#124; <a href='https://github.com/Minamotooo/Luck-Is-All-You-Need-DL-Sprint-4.0/blob/main/Presentation.pdf' target='_blank'><i class='fa-solid fa-file-powerpoint'></i> Slides</a>"
         start_date: 2026-03
 
       - name: MemoryLane
@@ -115,7 +115,7 @@ cv:
           - Approached grayscale image colorization as a Computer Vision problem of conditional image generation in CIELab color space.
           - Built a ConvNeXt-Base encoder–U-Net decoder with a PatchGAN discriminator.
           - Reduced the dull, grayish outputs common in colorization models by training on colorfulness-filtered data with a combined perceptual + adversarial loss (VGG + PatchGAN).
-          - "<a href='https://github.com/Minamotooo/MemoryLane' target='_blank'><i class='fa-brands fa-github'></i> Code</a> | <a href='https://github.com/Minamotooo/MemoryLane/blob/main/MemoryLane.pdf' target='_blank'><i class='fa-solid fa-file-powerpoint'></i> Slides</a>"
+          - "<a href='https://github.com/Minamotooo/MemoryLane' target='_blank'><i class='fa-brands fa-github'></i> Code</a> &#124; <a href='https://github.com/Minamotooo/MemoryLane/blob/main/MemoryLane.pdf' target='_blank'><i class='fa-solid fa-file-powerpoint'></i> Slides</a>"
         start_date: 2026-04
 
       - name: Scramble
