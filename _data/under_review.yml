@@ -2,6 +2,7 @@
 # `authors` and `mentors` are names from _data/people.yml; a trailing * marks equal contribution,
 # and a trailing ^N (e.g. "Name^1") shows a numbered superscript.
 # `figure` (optional) is a file in assets/img/publication_preview/; `figure_alt` describes it.
+# `figure_fit: cover` (optional) fills the thumbnail with the figure's centre, for very wide figures.
 - title: "Not All in One View: Bringing Evidence Together for Training-Free Chart and Table Question Answering"
   authors: ["Abrar Zahin Raihan*", "Aurchi Chowdhury*", "Nazia Tasnim"]
   figure: cr1r-pipeline.jpg
@@ -19,6 +20,7 @@
 - title: "Nothing to Attend To: Redundancy, Not Synergy, in Multimodal Molecular Property Prediction"
   authors: ["Abrar Zahin Raihan^1", "Aurchi Chowdhury^1", "Md Toki Tahmid^2", "Tanjeem Azwad Zaman^2", "Era Sanjida Islam^3", "M. Saifur Rahman"]
   figure: nothing-to-attend-architecture.jpg
+  figure_fit: cover
   figure_alt: "A molecule is encoded as SMILES, a molecular graph and a line graph by a frozen chemical language model and two graph autoencoders; linear probes show the language model already captures the properties the graph encoders capture"
   abstract: >-
     Multimodal molecular property predictors typically assume that different views of a molecule carry complementary information, and that exploiting it requires a fusion mechanism that models interactions between modalities. We test both assumptions for frozen encoders combined by late fusion: a pretrained chemical language model and two graph autoencoders, evaluated on all eleven MoleculeNet benchmarks over twenty seeds, each with its own scaffold split, using paired significance tests. Adding the graph encoders to the language model changes ROC-AUC by +0.006 on average, with significant gains on three datasets and significant losses on three. Cross-modal attention is the best fusion variant on none of the eleven, and neither a transformer fusion head nor a parameter-matched concatenation baseline changes this; both results hold when the language model is replaced by Morgan fingerprints. Linear probes show that the language model recovers the chemical properties encoded by the graph encoders, including topological ones. Partial information decomposition, with nonlinear estimators that recover planted synergy, finds little synergy between the modalities, the very quantity cross-modal attention is designed to exploit. We derive a criterion for the value of a modality: the conditional information it adds to the modalities already present. Estimated on training data alone, it predicts realised fusion gains across 18 modality additions and three fusion heads (Spearman ρ ≈ 0.5), better than the information the modality carries on its own. Three-dimensional geometry illustrates the criterion: it improves solvation prediction but degrades binding prediction, where it adds no usable information.

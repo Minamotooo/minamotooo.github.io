@@ -680,6 +680,29 @@ html {
   cursor: zoom-in;
 }
 
+/* figure_fit: cover. The thumbnail is the figure's centre, drawn as a background that fills the
+   frame. The real <img> is invisible and only there so medium-zoom opens the whole figure. */
+.pub-figure--cover {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: zoom-in;
+}
+
+.pub-figure--cover img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  max-height: none;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
 @media (min-width: 768px) {
   .pub-figure {
     float: right;

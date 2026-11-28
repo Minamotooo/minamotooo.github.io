@@ -1,14 +1,28 @@
 {% comment %}
   A paper's key figure as a small thumbnail beside its entry (below the title on phones).
   `file` is a name in assets/img/publication_preview/; clicking opens it full size (medium-zoom).
+  `fit: cover` (optional) fills the thumbnail with the centre of a very wide figure instead of
+  shrinking the whole figure to fit. The thumbnail is then drawn as a background, and the
+  full-size <img> sits invisibly on top so clicking still zooms into the whole figure.
 {% endcomment %}
 {% assign fig_alt = include.alt | default: include.title %}
-<figure class="pub-figure">
-  <img
-    src="{{ include.file | prepend: '/assets/img/publication_preview/' | relative_url }}"
-    alt="{{ fig_alt | strip_html | escape }}"
-    loading="lazy"
-    decoding="async"
-    data-zoomable
+{% assign fig_src = include.file | prepend: '/assets/img/publication_preview/' | relative_url %}
+{% if include.fit == 'cover' %}
+  <figure
+    class="pub-figure pub-figure--cover"
+    style="background-image: url('{{ fig_src }}')"
+    onclick="if (event.target === this) this.querySelector('img').click()"
   >
-</figure>
+    <img src="{{ fig_src }}" alt="{{ fig_alt | strip_html | escape }}" loading="lazy" decoding="async" data-zoomable>
+  </figure>
+{% else %}
+  <figure class="pub-figure">
+    <img
+      src="{{ fig_src }}"
+      alt="{{ fig_alt | strip_html | escape }}"
+      loading="lazy"
+      decoding="async"
+      data-zoomable
+    >
+  </figure>
+{% endif %}
